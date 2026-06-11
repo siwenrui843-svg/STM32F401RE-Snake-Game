@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\demo_main.o"
+".\objects\gpio.o"
+".\objects\i2c.o"
+".\objects\stm32f4xx_adc.o"
+".\objects\stm32f4xx_gpio.o"
+".\objects\stm32f4xx_i2c.o"
+".\objects\stm32f4xx_rcc.o"
+".\objects\stm32f4xx_usart.o"
+".\objects\timer.o"
+".\objects\uart.o"
+".\src\Libfiles\LCDFunctions.lib"
+".\src\Libfiles\Demo_mini_Project.lib"
+".\objects\utils.o"
+".\objects\ui_display.o"
+".\objects\app.o"
+".\objects\snake_game.o"
+".\objects\snake_render.o"
+".\objects\gesture.o"
+".\objects\eventrecorder.o"
+".\objects\startup_stm32f401xe.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\Demo_mini_Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Demo_mini_Project.map" -o .\Objects\Demo_mini_Project.axf
