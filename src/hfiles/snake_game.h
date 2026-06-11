@@ -42,6 +42,12 @@
 #define FOOD_SCORE  10
 
 /*
+ * Number of points subtracted from the score when the Snake eats
+ * a danger sign (triangle).
+ */
+#define DANGER_PENALTY  1
+
+/*
  * Score thresholds at which the game level increases.
  */
 #define LEVEL2_THRESHOLD 30
@@ -92,6 +98,20 @@ typedef struct {
      */
     uint8_t food_x;
     uint8_t food_y;
+
+    /*
+     * Danger sign (triangle) position on the grid.
+     * Eating this subtracts DANGER_PENALTY from the score.
+     */
+    uint8_t danger_x;
+    uint8_t danger_y;
+
+    /*
+     * End sign (cross / X) position on the grid.
+     * Eating this immediately ends the game.
+     */
+    uint8_t end_x;
+    uint8_t end_y;
 
     /*
      * Current score and high score.
@@ -146,6 +166,20 @@ void SnakeGame_Update(SnakeGame_t *game);
  * that is not occupied by the Snake or by an obstacle.
  */
 void SnakeGame_PlaceFood(SnakeGame_t *game);
+
+/*
+ * Places the danger sign (triangle) at a random position inside the
+ * playable area that is not occupied by the Snake, an obstacle,
+ * food, or the end sign.
+ */
+void SnakeGame_PlaceDanger(SnakeGame_t *game);
+
+/*
+ * Places the end sign (cross / X) at a random position inside the
+ * playable area that is not occupied by the Snake, an obstacle,
+ * food, or the danger sign.
+ */
+void SnakeGame_PlaceEnd(SnakeGame_t *game);
 
 /*
  * Returns the movement delay in ms for the current game level.

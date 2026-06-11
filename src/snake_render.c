@@ -49,6 +49,14 @@ static const uint8_t P_FOOD_ODD[4]   = { 0x60, 0xF0, 0xF0, 0x60 };
 static const uint8_t P_WALL_EVEN[4]  = { 0x00, 0x0F, 0x00, 0x0F };
 static const uint8_t P_WALL_ODD[4]   = { 0xF0, 0x00, 0xF0, 0x00 };
 
+/* Danger sign — filled triangle (△) */
+static const uint8_t P_DANGER_EVEN[4] = { 0x04, 0x07, 0x07, 0x04 };
+static const uint8_t P_DANGER_ODD[4]  = { 0x40, 0x70, 0x70, 0x40 };
+
+/* End sign — cross (✕) */
+static const uint8_t P_END_EVEN[4] = { 0x09, 0x06, 0x06, 0x09 };
+static const uint8_t P_END_ODD[4]  = { 0x90, 0x60, 0x60, 0x90 };
+
 
 /*
  * ---------------------------------------------------------------------------
@@ -100,6 +108,18 @@ static void DrawFood(uint8_t grid_x, uint8_t grid_y)
 {
     FB_Write(grid_x, grid_y,
              (grid_y & 1U) ? P_FOOD_ODD : P_FOOD_EVEN);
+}
+
+static void DrawDanger(uint8_t grid_x, uint8_t grid_y)
+{
+    FB_Write(grid_x, grid_y,
+             (grid_y & 1U) ? P_DANGER_ODD : P_DANGER_EVEN);
+}
+
+static void DrawEnd(uint8_t grid_x, uint8_t grid_y)
+{
+    FB_Write(grid_x, grid_y,
+             (grid_y & 1U) ? P_END_ODD : P_END_EVEN);
 }
 
 
@@ -235,7 +255,17 @@ void SnakeRender_Draw(const SnakeGame_t *game)
     DrawFood(game->food_x, game->food_y);
 
     /*
-     * 4. Draw snake body segments (tail to head).
+     * 4. Draw danger sign (triangle).
+     */
+    DrawDanger(game->danger_x, game->danger_y);
+
+    /*
+     * 5. Draw end sign (cross / X).
+     */
+    DrawEnd(game->end_x, game->end_y);
+
+    /*
+     * 6. Draw snake body segments (tail to head).
      *    The head is drawn last so it appears on top.
      */
     for (i = game->length; i > 0; i--)
@@ -253,7 +283,7 @@ void SnakeRender_Draw(const SnakeGame_t *game)
     }
 
     /*
-     * 5. Flush the completed framebuffer to the OLED.
+     * 7. Flush the completed framebuffer to the OLED.
      */
     FB_Flush();
 }

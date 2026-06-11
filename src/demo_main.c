@@ -177,6 +177,17 @@ int main(void)
     DWT_Delay_Init();
 
     /*
+     * Enable the GPIOA peripheral clock.
+     *
+     * PA1 is used as the OneWire data pin for the DS18S20 temperature
+     * sensor.  The GPIOA clock must be enabled before any GPIOA
+     * registers are written, otherwise the pin configuration performed
+     * by OneWire_Init() has no effect and all OneWire communication
+     * silently fails.
+     */
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+
+    /*
      * Initialise the OneWire bus.
      *
      * This configures PA1 as the OneWire data pin for the DS18S20

@@ -84,6 +84,16 @@ void SnakeGame_Init(SnakeGame_t *game)
     SnakeGame_PlaceFood(game);
 
     /*
+     * Place the danger sign (triangle) on a free cell.
+     */
+    SnakeGame_PlaceDanger(game);
+
+    /*
+     * Place the end sign (cross / X) on a free cell.
+     */
+    SnakeGame_PlaceEnd(game);
+
+    /*
      * Clear any leftover body positions.
      */
     for (i = game->length; i < MAX_SNAKE_LENGTH; i++)
@@ -251,6 +261,38 @@ void SnakeGame_Update(SnakeGame_t *game)
         SnakeGame_PlaceFood(game);
         SnakeGame_UpdateLevel(game);
     }
+
+    /*
+     * Danger sign detection.
+     * Eating the triangle deducts points and spawns a new danger sign.
+     */
+    if (new_head_x == game->danger_x && new_head_y == game->danger_y)
+    {
+        if (game->score >= DANGER_PENALTY)
+        {
+            game->score -= DANGER_PENALTY;
+        }
+        else
+        {
+            game->score = 0;
+        }
+
+        SnakeGame_PlaceDanger(game);
+    }
+
+    /*
+     * End sign detection.
+     * Eating the cross (X) immediately ends the game.
+     */
+    if (new_head_x == game->end_x && new_head_y == game->end_y)
+    {
+        game->game_over = 1;
+        if (game->score > game->high_score)
+        {
+            game->high_score = game->score;
+        }
+        return;
+    }
 }
 
 /*
@@ -274,7 +316,9 @@ void SnakeGame_PlaceFood(SnakeGame_t *game)
                       (PLAYABLE_MAX_Y - PLAYABLE_MIN_Y + 1));
 
         if (!IsCellOccupiedBySnake(game, x, y) &&
-            !SnakeGame_IsObstacle(game, x, y))
+            !SnakeGame_IsObstacle(game, x, y) &&
+            !(x == game->danger_x && y == game->danger_y) &&
+            !(x == game->end_x    && y == game->end_y))
         {
             game->food_x = x;
             game->food_y = y;
@@ -290,10 +334,122 @@ void SnakeGame_PlaceFood(SnakeGame_t *game)
         for (y = PLAYABLE_MIN_Y; y <= PLAYABLE_MAX_Y; y++)
         {
             if (!IsCellOccupiedBySnake(game, x, y) &&
-                !SnakeGame_IsObstacle(game, x, y))
+                !SnakeGame_IsObstacle(game, x, y) &&
+                !(x == game->danger_x && y == game->danger_y) &&
+                !(x == game->end_x    && y == game->end_y))
             {
                 game->food_x = x;
                 game->food_y = y;
+                return;
+            }
+        }
+    }
+}
+
+/*
+ * Returns 1 if a cell is occupied by food, danger, or end sign.
+ */
+static uint8_t IsCellOccupiedByItem(const SnakeGame_t *game,
+                                    uint8_t x, uint8_t y)
+{
+    if (x == game->food_x   && y == game->food_y)   { return 1; }
+    if (x == game->danger_x && y == game->danger_y) { return 1; }
+    if (x == game->end_x    && y == game->end_y)    { return 1; }
+    return 0;
+}
+
+/*
+ * Places the danger sign (triangle) at a random unoccupied playable cell.
+ */
+void SnakeGame_PlaceDanger(SnakeGame_t *game)
+{
+    uint8_t x, y;
+    int seed;
+    int attempts;
+
+    seed = (int)msTicks;
+
+    for (attempts = 0; attempts < 2000; attempts++)
+    {
+        x = PLAYABLE_MIN_X +
+            (uint8_t)(simple_random(&seed) %
+                      (PLAYABLE_MAX_X - PLAYABLE_MIN_X + 1));
+        y = PLAYABLE_MIN_Y +
+            (uint8_t)(simple_random(&seed) %
+                      (PLAYABLE_MAX_Y - PLAYABLE_MIN_Y + 1));
+
+        if (!IsCellOccupiedBySnake(game, x, y) &&
+            !SnakeGame_IsObstacle(game, x, y) &&
+            !IsCellOccupiedByItem(game, x, y))
+        {
+            game->danger_x = x;
+            game->danger_y = y;
+            return;
+        }
+    }
+
+    /*
+     * Fallback: linear scan for a free cell.
+     */
+    for (x = PLAYABLE_MIN_X; x <= PLAYABLE_MAX_X; x++)
+    {
+        for (y = PLAYABLE_MIN_Y; y <= PLAYABLE_MAX_Y; y++)
+        {
+            if (!IsCellOccupiedBySnake(game, x, y) &&
+                !SnakeGame_IsObstacle(game, x, y) &&
+                !IsCellOccupiedByItem(game, x, y))
+            {
+                game->danger_x = x;
+                game->danger_y = y;
+                return;
+            }
+        }
+    }
+}
+
+/*
+ * Places the end sign (cross / X) at a random unoccupied playable cell.
+ */
+void SnakeGame_PlaceEnd(SnakeGame_t *game)
+{
+    uint8_t x, y;
+    int seed;
+    int attempts;
+
+    seed = (int)msTicks;
+
+    for (attempts = 0; attempts < 2000; attempts++)
+    {
+        x = PLAYABLE_MIN_X +
+            (uint8_t)(simple_random(&seed) %
+                      (PLAYABLE_MAX_X - PLAYABLE_MIN_X + 1));
+        y = PLAYABLE_MIN_Y +
+            (uint8_t)(simple_random(&seed) %
+                      (PLAYABLE_MAX_Y - PLAYABLE_MIN_Y + 1));
+
+        if (!IsCellOccupiedBySnake(game, x, y) &&
+            !SnakeGame_IsObstacle(game, x, y) &&
+            !IsCellOccupiedByItem(game, x, y))
+        {
+            game->end_x = x;
+            game->end_y = y;
+            return;
+        }
+    }
+
+    /*
+     * Fallback: linear scan for a free cell.
+     */
+    for (x = PLAYABLE_MIN_X; x <= PLAYABLE_MAX_X; x++)
+    {
+        for (y = PLAYABLE_MIN_Y; y <= PLAYABLE_MAX_Y; y++)
+        {
+            if (!IsCellOccupiedBySnake(game, x, y) &&
+                !SnakeGame_IsObstacle(game, x, y) &&
+                !IsCellOccupiedByItem(game, x, y))
+            {
+                game->end_x = x;
+                game->end_y = y;
                 return;
             }
         }
