@@ -13,16 +13,18 @@
  * A smaller value makes the control more sensitive.
  * A larger value reduces accidental direction changes.
  */
-#define TILT_THRESHOLD_DEG  15.0f
+#define TILT_THRESHOLD_DEG  20.0f
 
 /*
- * Dead-zone half-width in degrees.
+ * Return-to-centre threshold in degrees.
  *
- * Angles within ±DEAD_ZONE_DEG of zero are considered neutral and
- * do not produce any direction command. This prevents the Snake from
- * moving when the board is held level.
+ * After a direction is fired, the tilt must drop BELOW this angle
+ * before a new direction can be triggered.  This prevents the snake
+ * from spinning while the board is held continuously tilted.
+ *
+ * Must be smaller than TILT_THRESHOLD_DEG.
  */
-#define DEAD_ZONE_DEG  5.0f
+#define TILT_CENTRE_DEG  10.0f
 
 /*
  * Low-pass filter coefficient for smoothing tilt angles.
@@ -35,7 +37,7 @@
  * A value of 0.15 provides moderate smoothing suitable for hand-held
  * tilt control.
  */
-#define TILT_FILTER_ALPHA  0.15f
+#define TILT_FILTER_ALPHA  0.25f
 
 /*
  * Structure that holds the tilt-gesture processing state.
@@ -95,6 +97,17 @@ typedef struct {
      * The candidate direction during debouncing.
      */
     SnakeDirection candidate_direction;
+
+    /*
+     * Return-to-centre flag.
+     *
+     * 1 = board has returned to near-level since the last direction fire.
+     * 0 = still tilted from the last trigger; new triggers are blocked.
+     *
+     * This prevents continuous re-triggering while the board is held
+     * at a steady tilt.
+     */
+    uint8_t centred;
 
 } Gesture_t;
 

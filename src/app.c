@@ -307,17 +307,16 @@ static void DrawCalibrateScreen(void)
 {
     OLED_Clear();
 
-    OLED_SetCursor(1, 0);
-    OLED_PrintString("CALIBRATION");
+    OLED_SetCursor(0, 0);
+    OLED_PrintString("  CALIBRATION");
 
+    OLED_SetCursor(2, 0);
+    OLED_PrintString("Hold LEVEL, tilt");
     OLED_SetCursor(3, 0);
-    OLED_PrintString("Hold board LEVEL");
+    OLED_PrintString("to see direction");
 
-    OLED_SetCursor(4, 0);
-    OLED_PrintString("Press K3 to save");
-
-    OLED_SetCursor(5, 0);
-    OLED_PrintString("Press K4 to cancel");
+    OLED_SetCursor(7, 0);
+    OLED_PrintString("K3:Save  K4:Cancel");
 }
 
 /*
@@ -947,26 +946,53 @@ void App_Run(AppContext_t *app)
             app->last_mpu_time = now;
 
             /*
-             * Display current roll and pitch on OLED for user feedback.
+             * Display live tilt direction arrow so the user knows
+             * which way UP / DOWN / LEFT / RIGHT maps to.
+             *
+             * The arrow updates in real time — tilt the board to see
+             * which physical orientation maps to which snake direction.
+             *
+             *   Pitch > 0  (far edge up)  → UP    ^
+             *   Pitch < 0  (near edge up) → DOWN  v
+             *   Roll  > 0  (right side up)→ RIGHT >
+             *   Roll  < 0  (left side up) → LEFT  <
              */
             {
                 float roll  = Gesture_ComputeRoll(app->accel_y, app->accel_z);
                 float pitch = Gesture_ComputePitch(app->accel_x,
                                                     app->accel_y,
                                                     app->accel_z);
-                char buf[12];
+                float abs_r = roll  < 0.0f ? -roll  : roll;
+                float abs_p = pitch < 0.0f ? -pitch : pitch;
+                const char *arrow = "  O  ";
 
-                OLED_SetCursor(1, 90);
-                OLED_PrintString("R:");
-                intToStr((int)roll, buf);
-                OLED_PrintString(buf);
-                OLED_PrintString("  ");
+                if (abs_r >= 20.0f || abs_p >= 20.0f)
+                {
+                    if (abs_p > abs_r)
+                    {
+                        arrow = (pitch > 0.0f) ? "  vDN " : "  ^UP ";
+                    }
+                    else
+                    {
+                        arrow = (roll > 0.0f)  ? "  <LT " : "  >RT ";
+                    }
+                }
 
-                OLED_SetCursor(2, 90);
-                OLED_PrintString("P:");
-                intToStr((int)pitch, buf);
-                OLED_PrintString(buf);
-                OLED_PrintString("  ");
+                OLED_SetCursor(5, 30);
+                OLED_PrintString(arrow);
+
+                /* Also show raw angles for debugging */
+                {
+                    char buf[8];
+                    OLED_SetCursor(6, 0);
+                    OLED_PrintString("R:");
+                    intToStr((int)roll, buf);
+                    OLED_PrintString(buf);
+                    OLED_PrintString(" P:");
+                    intToStr((int)pitch, buf);
+                    OLED_PrintString(buf);
+                    OLED_PrintString("   ");
+                }
             }
         }
 
@@ -1036,10 +1062,19 @@ void App_Run(AppContext_t *app)
         {
             ReadMPU(app);
             app->last_mpu_time = now;
+
+            /*
+             * Process tilt immediately after reading MPU so that the
+             * direction is updated with the freshest accelerometer data.
+             */
+            if (app->control_mode == CONTROL_MODE_TILT)
+            {
+                ProcessPlayingTilt(app);
+            }
         }
 
         /*
-         * Task 2: Read buttons at 50 Hz.
+         * Task 2: Read buttons and process tilt at 50 Hz.
          */
         if ((now - app->last_button_time) >= BUTTON_READ_INTERVAL_MS)
         {
@@ -1086,18 +1121,6 @@ void App_Run(AppContext_t *app)
             if (app->control_mode == CONTROL_MODE_BUTTON)
             {
                 ProcessPlayingButtons(app, btn_held);
-            }
-        }
-
-        /*
-         * Task 3: In tilt-control mode, process tilt input at 50 Hz.
-         */
-        if (app->control_mode == CONTROL_MODE_TILT)
-        {
-            if ((now - app->last_mpu_time) < MPU_READ_INTERVAL_MS)
-            {
-                /* MPU was just read; process tilt. */
-                ProcessPlayingTilt(app);
             }
         }
 

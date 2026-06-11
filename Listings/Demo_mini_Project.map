@@ -400,12 +400,12 @@ Section Cross References
     app_1.o(.text.App_Run) refers to gesture_1.o(.text.Gesture_ComputePitch) for Gesture_ComputePitch
     app_1.o(.text.App_Run) refers to gesture_1.o(.text.Gesture_Calibrate) for Gesture_Calibrate
     app_1.o(.text.App_Run) refers to timer_delay.o(.text.delayMs) for delayMs
+    app_1.o(.text.App_Run) refers to app_1.o(.text.ProcessPlayingTilt) for ProcessPlayingTilt
     app_1.o(.text.App_Run) refers to app_1.o(.text.ReadButtonsHeld) for ReadButtonsHeld
     app_1.o(.text.App_Run) refers to app_1.o(.bss.App_Run.k4_was_held) for App_Run.k4_was_held
     app_1.o(.text.App_Run) refers to app_1.o(.bss.App_Run.k4_press_start) for App_Run.k4_press_start
     app_1.o(.text.App_Run) refers to app_1.o(.text.DrawPauseScreen) for DrawPauseScreen
     app_1.o(.text.App_Run) refers to app_1.o(.text.ProcessPlayingButtons) for ProcessPlayingButtons
-    app_1.o(.text.App_Run) refers to app_1.o(.text.ProcessPlayingTilt) for ProcessPlayingTilt
     app_1.o(.text.App_Run) refers to snake_game_1.o(.text.SnakeGame_GetSpeedMs) for SnakeGame_GetSpeedMs
     app_1.o(.text.App_Run) refers to snake_game_1.o(.text.SnakeGame_Update) for SnakeGame_Update
     app_1.o(.text.App_Run) refers to app_1.o(.text.DrawGameOverScreen) for DrawGameOverScreen
@@ -416,14 +416,14 @@ Section Cross References
     app_1.o(.text.ReadTemperature) refers to my_ds18s20.o(.text.DS18S20_StartConversion) for DS18S20_StartConversion
     app_1.o(.ARM.exidx.text.ReadTemperature) refers to app_1.o(.text.ReadTemperature) for [Anonymous Symbol]
     app_1.o(.text.UpdateLCD) refers to lcd.o(.text.lcd_set_cursor) for lcd_set_cursor
-    app_1.o(.text.UpdateLCD) refers to app_1.o(.rodata.str1.1) for .L.str.18
+    app_1.o(.text.UpdateLCD) refers to app_1.o(.rodata.str1.1) for .L.str.23
     app_1.o(.text.UpdateLCD) refers to lcd.o(.text.lcd_print) for lcd_print
     app_1.o(.text.UpdateLCD) refers to utils_1.o(.text.intToStr) for intToStr
     app_1.o(.text.UpdateLCD) refers to app_1.o(.text.LCD_PrintTemp) for LCD_PrintTemp
     app_1.o(.ARM.exidx.text.UpdateLCD) refers to app_1.o(.text.UpdateLCD) for [Anonymous Symbol]
     app_1.o(.text.DrawMainMenu) refers to oled.o(.text.OLED_Clear) for OLED_Clear
     app_1.o(.text.DrawMainMenu) refers to oled.o(.text.OLED_SetCursor) for OLED_SetCursor
-    app_1.o(.text.DrawMainMenu) refers to app_1.o(.rodata.str1.1) for .L.str.26
+    app_1.o(.text.DrawMainMenu) refers to app_1.o(.rodata.str1.1) for .L.str.32
     app_1.o(.text.DrawMainMenu) refers to oled.o(.text.OLED_PrintString) for OLED_PrintString
     app_1.o(.ARM.exidx.text.DrawMainMenu) refers to app_1.o(.text.DrawMainMenu) for [Anonymous Symbol]
     app_1.o(.text.ReadButtonPresses) refers to buttons.o(.text.Button_UP_Pressed) for Button_UP_Pressed
@@ -432,17 +432,20 @@ Section Cross References
     app_1.o(.text.ReadButtonPresses) refers to buttons.o(.text.Button_AS_Pressed) for Button_AS_Pressed
     app_1.o(.ARM.exidx.text.ReadButtonPresses) refers to app_1.o(.text.ReadButtonPresses) for [Anonymous Symbol]
     app_1.o(.text.DrawMenuSelection) refers to oled.o(.text.OLED_SetCursor) for OLED_SetCursor
-    app_1.o(.text.DrawMenuSelection) refers to app_1.o(.rodata.str1.1) for .L.str.32
+    app_1.o(.text.DrawMenuSelection) refers to app_1.o(.rodata.str1.1) for .L.str.38
     app_1.o(.text.DrawMenuSelection) refers to oled.o(.text.OLED_PrintString) for OLED_PrintString
     app_1.o(.ARM.exidx.text.DrawMenuSelection) refers to app_1.o(.text.DrawMenuSelection) for [Anonymous Symbol]
     app_1.o(.text.DrawCalibrateScreen) refers to oled.o(.text.OLED_Clear) for OLED_Clear
     app_1.o(.text.DrawCalibrateScreen) refers to oled.o(.text.OLED_SetCursor) for OLED_SetCursor
-    app_1.o(.text.DrawCalibrateScreen) refers to app_1.o(.rodata.str1.1) for .L.str.33
+    app_1.o(.text.DrawCalibrateScreen) refers to app_1.o(.rodata.str1.1) for .L.str.39
     app_1.o(.text.DrawCalibrateScreen) refers to oled.o(.text.OLED_PrintString) for OLED_PrintString
     app_1.o(.ARM.exidx.text.DrawCalibrateScreen) refers to app_1.o(.text.DrawCalibrateScreen) for [Anonymous Symbol]
     app_1.o(.text.ReadMPU) refers to mpu6500.o(.text.MPU6500_ReadAccelRaw) for MPU6500_ReadAccelRaw
     app_1.o(.text.ReadMPU) refers to mpu6500.o(.text.MPU6500_ReadGyroRaw) for MPU6500_ReadGyroRaw
     app_1.o(.ARM.exidx.text.ReadMPU) refers to app_1.o(.text.ReadMPU) for [Anonymous Symbol]
+    app_1.o(.text.ProcessPlayingTilt) refers to gesture_1.o(.text.Gesture_Update) for Gesture_Update
+    app_1.o(.text.ProcessPlayingTilt) refers to snake_game_1.o(.text.SnakeGame_SetDirection) for SnakeGame_SetDirection
+    app_1.o(.ARM.exidx.text.ProcessPlayingTilt) refers to app_1.o(.text.ProcessPlayingTilt) for [Anonymous Symbol]
     app_1.o(.text.ReadButtonsHeld) refers to buttons.o(.text.Button_UP_Pressed) for Button_UP_Pressed
     app_1.o(.text.ReadButtonsHeld) refers to buttons.o(.text.Button_Sharp_Pressed) for Button_Sharp_Pressed
     app_1.o(.text.ReadButtonsHeld) refers to buttons.o(.text.Button_DOWN_Pressed) for Button_DOWN_Pressed
@@ -450,17 +453,14 @@ Section Cross References
     app_1.o(.ARM.exidx.text.ReadButtonsHeld) refers to app_1.o(.text.ReadButtonsHeld) for [Anonymous Symbol]
     app_1.o(.text.DrawPauseScreen) refers to oled.o(.text.OLED_Clear) for OLED_Clear
     app_1.o(.text.DrawPauseScreen) refers to oled.o(.text.OLED_SetCursor) for OLED_SetCursor
-    app_1.o(.text.DrawPauseScreen) refers to app_1.o(.rodata.str1.1) for .L.str.37
+    app_1.o(.text.DrawPauseScreen) refers to app_1.o(.rodata.str1.1) for .L.str.43
     app_1.o(.text.DrawPauseScreen) refers to oled.o(.text.OLED_PrintString) for OLED_PrintString
     app_1.o(.ARM.exidx.text.DrawPauseScreen) refers to app_1.o(.text.DrawPauseScreen) for [Anonymous Symbol]
     app_1.o(.text.ProcessPlayingButtons) refers to snake_game_1.o(.text.SnakeGame_SetDirection) for SnakeGame_SetDirection
     app_1.o(.ARM.exidx.text.ProcessPlayingButtons) refers to app_1.o(.text.ProcessPlayingButtons) for [Anonymous Symbol]
-    app_1.o(.text.ProcessPlayingTilt) refers to gesture_1.o(.text.Gesture_Update) for Gesture_Update
-    app_1.o(.text.ProcessPlayingTilt) refers to snake_game_1.o(.text.SnakeGame_SetDirection) for SnakeGame_SetDirection
-    app_1.o(.ARM.exidx.text.ProcessPlayingTilt) refers to app_1.o(.text.ProcessPlayingTilt) for [Anonymous Symbol]
     app_1.o(.text.DrawGameOverScreen) refers to oled.o(.text.OLED_Clear) for OLED_Clear
     app_1.o(.text.DrawGameOverScreen) refers to oled.o(.text.OLED_SetCursor) for OLED_SetCursor
-    app_1.o(.text.DrawGameOverScreen) refers to app_1.o(.rodata.str1.1) for .L.str.40
+    app_1.o(.text.DrawGameOverScreen) refers to app_1.o(.rodata.str1.1) for .L.str.46
     app_1.o(.text.DrawGameOverScreen) refers to oled.o(.text.OLED_PrintString) for OLED_PrintString
     app_1.o(.text.DrawGameOverScreen) refers to utils_1.o(.text.intToStr) for intToStr
     app_1.o(.ARM.exidx.text.DrawGameOverScreen) refers to app_1.o(.text.DrawGameOverScreen) for [Anonymous Symbol]
@@ -1402,10 +1402,10 @@ Removing Unused input sections from the image.
     Removing app_1.o(.ARM.exidx.text.DrawMenuSelection), (8 bytes).
     Removing app_1.o(.ARM.exidx.text.DrawCalibrateScreen), (8 bytes).
     Removing app_1.o(.ARM.exidx.text.ReadMPU), (8 bytes).
+    Removing app_1.o(.ARM.exidx.text.ProcessPlayingTilt), (8 bytes).
     Removing app_1.o(.ARM.exidx.text.ReadButtonsHeld), (8 bytes).
     Removing app_1.o(.ARM.exidx.text.DrawPauseScreen), (8 bytes).
     Removing app_1.o(.ARM.exidx.text.ProcessPlayingButtons), (8 bytes).
-    Removing app_1.o(.ARM.exidx.text.ProcessPlayingTilt), (8 bytes).
     Removing app_1.o(.ARM.exidx.text.DrawGameOverScreen), (8 bytes).
     Removing app_1.o(.ARM.exidx.text.LCD_PrintTemp), (8 bytes).
     Removing snake_game_1.o(.text), (0 bytes).
@@ -1762,224 +1762,230 @@ Image Symbol Table
     .text                                    0x080003ca   Section        0  indicate_semi.o(.text)
     [Anonymous Symbol]                       0x080003cc   Section        0  app_1.o(.text.App_Init)
     [Anonymous Symbol]                       0x08000498   Section        0  app_1.o(.text.App_Run)
-    [Anonymous Symbol]                       0x08000e3c   Section        0  buttons.o(.text.Button_AS_Pressed)
-    [Anonymous Symbol]                       0x08000e54   Section        0  buttons.o(.text.Button_DOWN_Pressed)
-    [Anonymous Symbol]                       0x08000e6c   Section        0  buttons.o(.text.Button_Sharp_Pressed)
-    [Anonymous Symbol]                       0x08000e84   Section        0  buttons.o(.text.Button_UP_Pressed)
-    [Anonymous Symbol]                       0x08000e9c   Section        0  buttons.o(.text.Buttons_Init)
-    [Anonymous Symbol]                       0x08000ee0   Section        0  my_ds18s20.o(.text.DS18S20_ReadTemp_x10_Now)
-    [Anonymous Symbol]                       0x08000f4c   Section        0  my_ds18s20.o(.text.DS18S20_StartConversion)
-    [Anonymous Symbol]                       0x08000fa0   Section        0  my_ds18s20.o(.text.DS18S20_Tick_1ms)
-    [Anonymous Symbol]                       0x08000ff8   Section        0  timer_delay.o(.text.DWT_Delay_Init)
-    DrawCalibrateScreen                      0x0800101d   Thumb Code    94  app_1.o(.text.DrawCalibrateScreen)
-    [Anonymous Symbol]                       0x0800101c   Section        0  app_1.o(.text.DrawCalibrateScreen)
-    DrawDanger                               0x0800107d   Thumb Code    56  snake_render_1.o(.text.DrawDanger)
-    [Anonymous Symbol]                       0x0800107c   Section        0  snake_render_1.o(.text.DrawDanger)
-    DrawEnd                                  0x080010b5   Thumb Code    56  snake_render_1.o(.text.DrawEnd)
-    [Anonymous Symbol]                       0x080010b4   Section        0  snake_render_1.o(.text.DrawEnd)
-    DrawFood                                 0x080010ed   Thumb Code    56  snake_render_1.o(.text.DrawFood)
-    [Anonymous Symbol]                       0x080010ec   Section        0  snake_render_1.o(.text.DrawFood)
-    DrawGameOverScreen                       0x08001125   Thumb Code   156  app_1.o(.text.DrawGameOverScreen)
-    [Anonymous Symbol]                       0x08001124   Section        0  app_1.o(.text.DrawGameOverScreen)
-    DrawMainMenu                             0x080011c1   Thumb Code   144  app_1.o(.text.DrawMainMenu)
-    [Anonymous Symbol]                       0x080011c0   Section        0  app_1.o(.text.DrawMainMenu)
-    DrawMenuSelection                        0x08001251   Thumb Code    70  app_1.o(.text.DrawMenuSelection)
-    [Anonymous Symbol]                       0x08001250   Section        0  app_1.o(.text.DrawMenuSelection)
-    DrawPauseScreen                          0x08001299   Thumb Code    74  app_1.o(.text.DrawPauseScreen)
-    [Anonymous Symbol]                       0x08001298   Section        0  app_1.o(.text.DrawPauseScreen)
-    DrawSnakeBody                            0x080012e5   Thumb Code    56  snake_render_1.o(.text.DrawSnakeBody)
-    [Anonymous Symbol]                       0x080012e4   Section        0  snake_render_1.o(.text.DrawSnakeBody)
-    DrawSnakeHead                            0x0800131d   Thumb Code    56  snake_render_1.o(.text.DrawSnakeHead)
-    [Anonymous Symbol]                       0x0800131c   Section        0  snake_render_1.o(.text.DrawSnakeHead)
-    DrawWall                                 0x08001355   Thumb Code    56  snake_render_1.o(.text.DrawWall)
-    [Anonymous Symbol]                       0x08001354   Section        0  snake_render_1.o(.text.DrawWall)
-    [Anonymous Symbol]                       0x0800138c   Section        0  gpio.o(.text.EXTI0_IRQHandler)
-    [Anonymous Symbol]                       0x08001410   Section        0  gpio.o(.text.EXTI15_10_IRQHandler)
-    [Anonymous Symbol]                       0x08001494   Section        0  gpio.o(.text.EXTI1_IRQHandler)
-    [Anonymous Symbol]                       0x08001518   Section        0  gpio.o(.text.EXTI2_IRQHandler)
-    [Anonymous Symbol]                       0x0800159c   Section        0  gpio.o(.text.EXTI3_IRQHandler)
-    [Anonymous Symbol]                       0x08001620   Section        0  gpio.o(.text.EXTI4_IRQHandler)
-    [Anonymous Symbol]                       0x080016a4   Section        0  gpio.o(.text.EXTI9_5_IRQHandler)
-    FB_Flush                                 0x08001729   Thumb Code   332  snake_render_1.o(.text.FB_Flush)
-    [Anonymous Symbol]                       0x08001728   Section        0  snake_render_1.o(.text.FB_Flush)
-    FB_Write                                 0x08001875   Thumb Code   104  snake_render_1.o(.text.FB_Write)
-    [Anonymous Symbol]                       0x08001874   Section        0  snake_render_1.o(.text.FB_Write)
-    [Anonymous Symbol]                       0x080018dc   Section        0  gesture_1.o(.text.Gesture_Calibrate)
-    [Anonymous Symbol]                       0x0800194c   Section        0  gesture_1.o(.text.Gesture_ComputePitch)
-    [Anonymous Symbol]                       0x080019d8   Section        0  gesture_1.o(.text.Gesture_ComputeRoll)
-    [Anonymous Symbol]                       0x08001a10   Section        0  gesture_1.o(.text.Gesture_Init)
-    [Anonymous Symbol]                       0x08001a48   Section        0  gesture_1.o(.text.Gesture_Update)
-    [Anonymous Symbol]                       0x08001c6c   Section        0  i2c1_bus.o(.text.I2C1_Init)
-    [Anonymous Symbol]                       0x08001d3c   Section        0  i2c1_bus.o(.text.I2C1_ReadRegister)
-    [Anonymous Symbol]                       0x08001e8c   Section        0  i2c1_bus.o(.text.I2C1_WriteControlData)
-    [Anonymous Symbol]                       0x08001f7c   Section        0  i2c1_bus.o(.text.I2C1_WriteRegister)
-    IsCellOccupiedByItem                     0x0800206d   Thumb Code   148  snake_game_1.o(.text.IsCellOccupiedByItem)
-    [Anonymous Symbol]                       0x0800206c   Section        0  snake_game_1.o(.text.IsCellOccupiedByItem)
-    IsCellOccupiedBySnake                    0x08002101   Thumb Code   114  snake_game_1.o(.text.IsCellOccupiedBySnake)
-    [Anonymous Symbol]                       0x08002100   Section        0  snake_game_1.o(.text.IsCellOccupiedBySnake)
-    LCD_PrintTemp                            0x08002175   Thumb Code   130  app_1.o(.text.LCD_PrintTemp)
-    [Anonymous Symbol]                       0x08002174   Section        0  app_1.o(.text.LCD_PrintTemp)
-    [Anonymous Symbol]                       0x080021f8   Section        0  mpu6500.o(.text.MPU6500_Init)
-    [Anonymous Symbol]                       0x08002208   Section        0  mpu6500.o(.text.MPU6500_Read16)
-    [Anonymous Symbol]                       0x08002248   Section        0  mpu6500.o(.text.MPU6500_ReadAccelRaw)
-    [Anonymous Symbol]                       0x08002274   Section        0  mpu6500.o(.text.MPU6500_ReadGyroRaw)
-    [Anonymous Symbol]                       0x080022a0   Section        0  mpu6500.o(.text.MPU6500_ReadWhoAmI)
-    [Anonymous Symbol]                       0x080022ac   Section        0  oled.o(.text.OLED_Clear)
-    [Anonymous Symbol]                       0x08002308   Section        0  oled.o(.text.OLED_Command)
-    [Anonymous Symbol]                       0x08002320   Section        0  oled.o(.text.OLED_Data)
-    [Anonymous Symbol]                       0x08002338   Section        0  oled.o(.text.OLED_Init)
-    [Anonymous Symbol]                       0x080023f4   Section        0  oled.o(.text.OLED_PrintChar)
-    [Anonymous Symbol]                       0x08002428   Section        0  oled.o(.text.OLED_PrintCharASCII)
-    [Anonymous Symbol]                       0x08002490   Section        0  oled.o(.text.OLED_PrintString)
-    [Anonymous Symbol]                       0x080024b4   Section        0  oled.o(.text.OLED_SetCursor)
-    [Anonymous Symbol]                       0x080024e8   Section        0  my_ds18s20.o(.text.OneWire_Init)
-    PlaceObstacles                           0x0800251d   Thumb Code   168  snake_game_1.o(.text.PlaceObstacles)
-    [Anonymous Symbol]                       0x0800251c   Section        0  snake_game_1.o(.text.PlaceObstacles)
-    ProcessPlayingButtons                    0x080025c5   Thumb Code   114  app_1.o(.text.ProcessPlayingButtons)
-    [Anonymous Symbol]                       0x080025c4   Section        0  app_1.o(.text.ProcessPlayingButtons)
-    ProcessPlayingTilt                       0x08002639   Thumb Code    66  app_1.o(.text.ProcessPlayingTilt)
-    [Anonymous Symbol]                       0x08002638   Section        0  app_1.o(.text.ProcessPlayingTilt)
-    ReadButtonPresses                        0x0800267d   Thumb Code   210  app_1.o(.text.ReadButtonPresses)
-    [Anonymous Symbol]                       0x0800267c   Section        0  app_1.o(.text.ReadButtonPresses)
-    ReadButtonsHeld                          0x08002751   Thumb Code   106  app_1.o(.text.ReadButtonsHeld)
-    [Anonymous Symbol]                       0x08002750   Section        0  app_1.o(.text.ReadButtonsHeld)
-    ReadMPU                                  0x080027bd   Thumb Code    46  app_1.o(.text.ReadMPU)
-    [Anonymous Symbol]                       0x080027bc   Section        0  app_1.o(.text.ReadMPU)
-    ReadTemperature                          0x080027ed   Thumb Code    56  app_1.o(.text.ReadTemperature)
-    [Anonymous Symbol]                       0x080027ec   Section        0  app_1.o(.text.ReadTemperature)
-    [Anonymous Symbol]                       0x08002824   Section        0  snake_game_1.o(.text.SnakeGame_GetSpeedMs)
-    [Anonymous Symbol]                       0x08002864   Section        0  snake_game_1.o(.text.SnakeGame_Init)
-    [Anonymous Symbol]                       0x0800291c   Section        0  snake_game_1.o(.text.SnakeGame_IsObstacle)
-    [Anonymous Symbol]                       0x080029ac   Section        0  snake_game_1.o(.text.SnakeGame_IsPlayable)
-    [Anonymous Symbol]                       0x080029f8   Section        0  snake_game_1.o(.text.SnakeGame_PlaceDanger)
-    [Anonymous Symbol]                       0x08002b50   Section        0  snake_game_1.o(.text.SnakeGame_PlaceEnd)
-    [Anonymous Symbol]                       0x08002ca8   Section        0  snake_game_1.o(.text.SnakeGame_PlaceFood)
-    [Anonymous Symbol]                       0x08002e5c   Section        0  snake_game_1.o(.text.SnakeGame_SetDirection)
-    [Anonymous Symbol]                       0x08002ed0   Section        0  snake_game_1.o(.text.SnakeGame_Update)
-    [Anonymous Symbol]                       0x08003154   Section        0  snake_game_1.o(.text.SnakeGame_UpdateLevel)
-    [Anonymous Symbol]                       0x08003194   Section        0  snake_render_1.o(.text.SnakeRender_Draw)
-    [Anonymous Symbol]                       0x08003284   Section        0  snake_render_1.o(.text.SnakeRender_DrawBorder)
-    [Anonymous Symbol]                       0x080032f4   Section        0  snake_render_1.o(.text.SnakeRender_Init)
-    [Anonymous Symbol]                       0x0800331c   Section        0  snake_render_1.o(.text.SnakeRender_Reset)
-    [Anonymous Symbol]                       0x08003330   Section        0  timer.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x08003340   Section        0  system_stm32f4xx.o(.text.SystemCoreClockUpdate)
-    [Anonymous Symbol]                       0x08003470   Section        0  system_stm32f4xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08003490   Section        0  timer_delay.o(.text.TIM2_IRQHandler)
-    [Anonymous Symbol]                       0x080034c4   Section        0  timer_delay.o(.text.TIM2_Init_1ms)
-    [Anonymous Symbol]                       0x0800353c   Section        0  uart.o(.text.USART2_IRQHandler)
-    [Anonymous Symbol]                       0x08003574   Section        0  stm32f4xx_usart.o(.text.USART_GetFlagStatus)
-    [Anonymous Symbol]                       0x080035b8   Section        0  stm32f4xx_usart.o(.text.USART_ReceiveData)
-    UpdateLCD                                0x080035c9   Thumb Code   430  app_1.o(.text.UpdateLCD)
-    [Anonymous Symbol]                       0x080035c8   Section        0  app_1.o(.text.UpdateLCD)
-    __NVIC_ClearPendingIRQ                   0x08003779   Thumb Code    48  gpio.o(.text.__NVIC_ClearPendingIRQ)
-    [Anonymous Symbol]                       0x08003778   Section        0  gpio.o(.text.__NVIC_ClearPendingIRQ)
-    __NVIC_ClearPendingIRQ                   0x080037a9   Thumb Code    48  uart.o(.text.__NVIC_ClearPendingIRQ)
-    [Anonymous Symbol]                       0x080037a8   Section        0  uart.o(.text.__NVIC_ClearPendingIRQ)
-    __NVIC_EnableIRQ                         0x080037d9   Thumb Code    48  timer_delay.o(.text.__NVIC_EnableIRQ)
-    [Anonymous Symbol]                       0x080037d8   Section        0  timer_delay.o(.text.__NVIC_EnableIRQ)
-    __NVIC_SetPriority                       0x08003809   Thumb Code    66  timer_delay.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08003808   Section        0  timer_delay.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x0800384c   Section        0  timer_delay.o(.text.delayMs)
-    [Anonymous Symbol]                       0x0800387c   Section        0  delay.o(.text.delay_cycles)
-    [Anonymous Symbol]                       0x08003888   Section        0  delay.o(.text.delay_ms)
-    [Anonymous Symbol]                       0x080038e0   Section        0  delay.o(.text.delay_us)
-    [Anonymous Symbol]                       0x0800393c   Section        0  gpio.o(.text.gpio_set)
-    [Anonymous Symbol]                       0x08003974   Section        0  gpio.o(.text.gpio_set_mode)
-    [Anonymous Symbol]                       0x08003ab8   Section        0  utils_1.o(.text.intToStr)
-    [Anonymous Symbol]                       0x08003b9c   Section        0  lcd.o(.text.lcd_init)
-    [Anonymous Symbol]                       0x08003c5c   Section        0  lcd.o(.text.lcd_print)
-    [Anonymous Symbol]                       0x08003ca4   Section        0  lcd.o(.text.lcd_put_char)
-    [Anonymous Symbol]                       0x08003d3c   Section        0  lcd.o(.text.lcd_set_cursor)
-    [Anonymous Symbol]                       0x08003d5c   Section        0  lcd.o(.text.lcd_write_cmd)
-    [Anonymous Symbol]                       0x08003df0   Section        0  demo_main.o(.text.main)
-    ow_delay_us                              0x08003e59   Thumb Code   138  my_ds18s20.o(.text.ow_delay_us)
-    [Anonymous Symbol]                       0x08003e58   Section        0  my_ds18s20.o(.text.ow_delay_us)
-    ow_pin_input                             0x08003ee5   Thumb Code    30  my_ds18s20.o(.text.ow_pin_input)
-    [Anonymous Symbol]                       0x08003ee4   Section        0  my_ds18s20.o(.text.ow_pin_input)
-    ow_pin_output_low                        0x08003f05   Thumb Code    50  my_ds18s20.o(.text.ow_pin_output_low)
-    [Anonymous Symbol]                       0x08003f04   Section        0  my_ds18s20.o(.text.ow_pin_output_low)
-    ow_read_bit                              0x08003f39   Thumb Code    54  my_ds18s20.o(.text.ow_read_bit)
-    [Anonymous Symbol]                       0x08003f38   Section        0  my_ds18s20.o(.text.ow_read_bit)
-    ow_read_byte                             0x08003f71   Thumb Code    80  my_ds18s20.o(.text.ow_read_byte)
-    [Anonymous Symbol]                       0x08003f70   Section        0  my_ds18s20.o(.text.ow_read_byte)
-    ow_reset                                 0x08003fc1   Thumb Code    60  my_ds18s20.o(.text.ow_reset)
-    [Anonymous Symbol]                       0x08003fc0   Section        0  my_ds18s20.o(.text.ow_reset)
-    ow_write_bit                             0x08003ffd   Thumb Code    64  my_ds18s20.o(.text.ow_write_bit)
-    [Anonymous Symbol]                       0x08003ffc   Section        0  my_ds18s20.o(.text.ow_write_bit)
-    ow_write_byte                            0x0800403d   Thumb Code    66  my_ds18s20.o(.text.ow_write_byte)
-    [Anonymous Symbol]                       0x0800403c   Section        0  my_ds18s20.o(.text.ow_write_byte)
-    simple_random                            0x08004081   Thumb Code    38  snake_game_1.o(.text.simple_random)
-    [Anonymous Symbol]                       0x08004080   Section        0  snake_game_1.o(.text.simple_random)
-    [Anonymous Symbol]                       0x080040a8   Section        0  uart.o(.text.uart_rx)
-    i.__ARM_fpclassifyf                      0x080040da   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
-    i.__hardfp_atan2f                        0x08004100   Section        0  atan2f.o(i.__hardfp_atan2f)
-    i.__hardfp_sqrtf                         0x080043ac   Section        0  sqrtf.o(i.__hardfp_sqrtf)
-    i.__mathlib_flt_infnan2                  0x080043e6   Section        0  funder.o(i.__mathlib_flt_infnan2)
-    i.__mathlib_flt_underflow                0x080043ec   Section        0  funder.o(i.__mathlib_flt_underflow)
-    $v0                                      0x080043fc   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x080043fc   Section       26  fpinit.o(x$fpl$fpinit)
-    x$fpl$usenofp                            0x08004416   Section        0  usenofp.o(x$fpl$usenofp)
-    __tagsym$$used.0                         0x08004428   Number         0  eventrecorder.o(.rodata.EventRecorderInfo)
-    P_DANGER_EVEN                            0x0800461b   Data           4  snake_render_1.o(.rodata.P_DANGER_EVEN)
-    [Anonymous Symbol]                       0x0800461b   Section        0  snake_render_1.o(.rodata.P_DANGER_EVEN)
-    P_DANGER_ODD                             0x0800461f   Data           4  snake_render_1.o(.rodata.P_DANGER_ODD)
-    [Anonymous Symbol]                       0x0800461f   Section        0  snake_render_1.o(.rodata.P_DANGER_ODD)
-    P_END_EVEN                               0x08004623   Data           4  snake_render_1.o(.rodata.P_END_EVEN)
-    [Anonymous Symbol]                       0x08004623   Section        0  snake_render_1.o(.rodata.P_END_EVEN)
-    P_END_ODD                                0x08004627   Data           4  snake_render_1.o(.rodata.P_END_ODD)
-    [Anonymous Symbol]                       0x08004627   Section        0  snake_render_1.o(.rodata.P_END_ODD)
-    P_FOOD_EVEN                              0x0800462b   Data           4  snake_render_1.o(.rodata.P_FOOD_EVEN)
-    [Anonymous Symbol]                       0x0800462b   Section        0  snake_render_1.o(.rodata.P_FOOD_EVEN)
-    P_FOOD_ODD                               0x0800462f   Data           4  snake_render_1.o(.rodata.P_FOOD_ODD)
-    [Anonymous Symbol]                       0x0800462f   Section        0  snake_render_1.o(.rodata.P_FOOD_ODD)
-    P_HEAD_EVEN                              0x08004633   Data           4  snake_render_1.o(.rodata.P_HEAD_EVEN)
-    [Anonymous Symbol]                       0x08004633   Section        0  snake_render_1.o(.rodata.P_HEAD_EVEN)
-    P_HEAD_ODD                               0x08004637   Data           4  snake_render_1.o(.rodata.P_HEAD_ODD)
-    [Anonymous Symbol]                       0x08004637   Section        0  snake_render_1.o(.rodata.P_HEAD_ODD)
-    P_SNAKE_EVEN                             0x0800463b   Data           4  snake_render_1.o(.rodata.P_SNAKE_EVEN)
-    [Anonymous Symbol]                       0x0800463b   Section        0  snake_render_1.o(.rodata.P_SNAKE_EVEN)
-    P_SNAKE_ODD                              0x0800463f   Data           4  snake_render_1.o(.rodata.P_SNAKE_ODD)
-    [Anonymous Symbol]                       0x0800463f   Section        0  snake_render_1.o(.rodata.P_SNAKE_ODD)
-    P_WALL_EVEN                              0x08004643   Data           4  snake_render_1.o(.rodata.P_WALL_EVEN)
-    [Anonymous Symbol]                       0x08004643   Section        0  snake_render_1.o(.rodata.P_WALL_EVEN)
-    P_WALL_ODD                               0x08004647   Data           4  snake_render_1.o(.rodata.P_WALL_ODD)
-    [Anonymous Symbol]                       0x08004647   Section        0  snake_render_1.o(.rodata.P_WALL_ODD)
-    .L.str.23                                0x08004650   Data          17  app_1.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08004650   Section        0  app_1.o(.rodata.str1.1)
-    .L.str.25                                0x08004661   Data          17  app_1.o(.rodata.str1.1)
-    .L.str.20                                0x0800466d   Data           5  app_1.o(.rodata.str1.1)
-    .L.str.21                                0x08004672   Data          17  app_1.o(.rodata.str1.1)
-    .L.str.42                                0x08004683   Data           8  app_1.o(.rodata.str1.1)
-    .L.str.5                                 0x08004688   Data           3  app_1.o(.rodata.str1.1)
-    .L.str.41                                0x0800468b   Data           8  app_1.o(.rodata.str1.1)
-    .L.str                                   0x08004693   Data           7  app_1.o(.rodata.str1.1)
-    .L.str.32                                0x08004698   Data           2  app_1.o(.rodata.str1.1)
-    .L.str.7                                 0x0800469a   Data          12  app_1.o(.rodata.str1.1)
-    .L.str.27                                0x080046a6   Data          18  app_1.o(.rodata.str1.1)
-    .L.str.28                                0x080046b8   Data          15  app_1.o(.rodata.str1.1)
-    .L.str.2                                 0x080046c7   Data           2  app_1.o(.rodata.str1.1)
-    .L.str.18                                0x0800471a   Data           3  app_1.o(.rodata.str1.1)
-    .L.str.22                                0x0800471d   Data           4  app_1.o(.rodata.str1.1)
-    .L.str.6                                 0x08004721   Data           3  app_1.o(.rodata.str1.1)
-    .L.str.4                                 0x08004724   Data           3  app_1.o(.rodata.str1.1)
-    .L.str.24                                0x08004727   Data          12  app_1.o(.rodata.str1.1)
-    .L.str.19                                0x0800472f   Data           4  app_1.o(.rodata.str1.1)
-    .L.str.1                                 0x08004733   Data          13  app_1.o(.rodata.str1.1)
-    .L.str.37                                0x08004740   Data          15  app_1.o(.rodata.str1.1)
-    .L.str.26                                0x0800474f   Data          19  app_1.o(.rodata.str1.1)
-    .L.str.40                                0x08004762   Data          18  app_1.o(.rodata.str1.1)
-    .L.str.31                                0x08004774   Data           2  app_1.o(.rodata.str1.1)
-    .L.str.3                                 0x08004776   Data           2  app_1.o(.rodata.str1.1)
-    .L.str.34                                0x08004778   Data          17  app_1.o(.rodata.str1.1)
-    .L.str.33                                0x08004789   Data          12  app_1.o(.rodata.str1.1)
-    .L.str.29                                0x08004795   Data          16  app_1.o(.rodata.str1.1)
-    .L.str.8                                 0x080047a5   Data          17  app_1.o(.rodata.str1.1)
-    .L.str.38                                0x080047b6   Data          11  app_1.o(.rodata.str1.1)
-    .L.str.35                                0x080047c1   Data          17  app_1.o(.rodata.str1.1)
-    .L.str.30                                0x080047d2   Data          17  app_1.o(.rodata.str1.1)
-    .L.str.36                                0x080047e3   Data          19  app_1.o(.rodata.str1.1)
-    .L.str.43                                0x080047f6   Data          12  app_1.o(.rodata.str1.1)
-    .L.str.39                                0x08004802   Data           9  app_1.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08000f18   Section        0  buttons.o(.text.Button_AS_Pressed)
+    [Anonymous Symbol]                       0x08000f30   Section        0  buttons.o(.text.Button_DOWN_Pressed)
+    [Anonymous Symbol]                       0x08000f48   Section        0  buttons.o(.text.Button_Sharp_Pressed)
+    [Anonymous Symbol]                       0x08000f60   Section        0  buttons.o(.text.Button_UP_Pressed)
+    [Anonymous Symbol]                       0x08000f78   Section        0  buttons.o(.text.Buttons_Init)
+    [Anonymous Symbol]                       0x08000fbc   Section        0  my_ds18s20.o(.text.DS18S20_ReadTemp_x10_Now)
+    [Anonymous Symbol]                       0x08001028   Section        0  my_ds18s20.o(.text.DS18S20_StartConversion)
+    [Anonymous Symbol]                       0x0800107c   Section        0  my_ds18s20.o(.text.DS18S20_Tick_1ms)
+    [Anonymous Symbol]                       0x080010d4   Section        0  timer_delay.o(.text.DWT_Delay_Init)
+    DrawCalibrateScreen                      0x080010f9   Thumb Code    94  app_1.o(.text.DrawCalibrateScreen)
+    [Anonymous Symbol]                       0x080010f8   Section        0  app_1.o(.text.DrawCalibrateScreen)
+    DrawDanger                               0x08001159   Thumb Code    56  snake_render_1.o(.text.DrawDanger)
+    [Anonymous Symbol]                       0x08001158   Section        0  snake_render_1.o(.text.DrawDanger)
+    DrawEnd                                  0x08001191   Thumb Code    56  snake_render_1.o(.text.DrawEnd)
+    [Anonymous Symbol]                       0x08001190   Section        0  snake_render_1.o(.text.DrawEnd)
+    DrawFood                                 0x080011c9   Thumb Code    56  snake_render_1.o(.text.DrawFood)
+    [Anonymous Symbol]                       0x080011c8   Section        0  snake_render_1.o(.text.DrawFood)
+    DrawGameOverScreen                       0x08001201   Thumb Code   156  app_1.o(.text.DrawGameOverScreen)
+    [Anonymous Symbol]                       0x08001200   Section        0  app_1.o(.text.DrawGameOverScreen)
+    DrawMainMenu                             0x0800129d   Thumb Code   144  app_1.o(.text.DrawMainMenu)
+    [Anonymous Symbol]                       0x0800129c   Section        0  app_1.o(.text.DrawMainMenu)
+    DrawMenuSelection                        0x0800132d   Thumb Code    70  app_1.o(.text.DrawMenuSelection)
+    [Anonymous Symbol]                       0x0800132c   Section        0  app_1.o(.text.DrawMenuSelection)
+    DrawPauseScreen                          0x08001375   Thumb Code    74  app_1.o(.text.DrawPauseScreen)
+    [Anonymous Symbol]                       0x08001374   Section        0  app_1.o(.text.DrawPauseScreen)
+    DrawSnakeBody                            0x080013c1   Thumb Code    56  snake_render_1.o(.text.DrawSnakeBody)
+    [Anonymous Symbol]                       0x080013c0   Section        0  snake_render_1.o(.text.DrawSnakeBody)
+    DrawSnakeHead                            0x080013f9   Thumb Code    56  snake_render_1.o(.text.DrawSnakeHead)
+    [Anonymous Symbol]                       0x080013f8   Section        0  snake_render_1.o(.text.DrawSnakeHead)
+    DrawWall                                 0x08001431   Thumb Code    56  snake_render_1.o(.text.DrawWall)
+    [Anonymous Symbol]                       0x08001430   Section        0  snake_render_1.o(.text.DrawWall)
+    [Anonymous Symbol]                       0x08001468   Section        0  gpio.o(.text.EXTI0_IRQHandler)
+    [Anonymous Symbol]                       0x080014ec   Section        0  gpio.o(.text.EXTI15_10_IRQHandler)
+    [Anonymous Symbol]                       0x08001570   Section        0  gpio.o(.text.EXTI1_IRQHandler)
+    [Anonymous Symbol]                       0x080015f4   Section        0  gpio.o(.text.EXTI2_IRQHandler)
+    [Anonymous Symbol]                       0x08001678   Section        0  gpio.o(.text.EXTI3_IRQHandler)
+    [Anonymous Symbol]                       0x080016fc   Section        0  gpio.o(.text.EXTI4_IRQHandler)
+    [Anonymous Symbol]                       0x08001780   Section        0  gpio.o(.text.EXTI9_5_IRQHandler)
+    FB_Flush                                 0x08001805   Thumb Code   332  snake_render_1.o(.text.FB_Flush)
+    [Anonymous Symbol]                       0x08001804   Section        0  snake_render_1.o(.text.FB_Flush)
+    FB_Write                                 0x08001951   Thumb Code   104  snake_render_1.o(.text.FB_Write)
+    [Anonymous Symbol]                       0x08001950   Section        0  snake_render_1.o(.text.FB_Write)
+    [Anonymous Symbol]                       0x080019b8   Section        0  gesture_1.o(.text.Gesture_Calibrate)
+    [Anonymous Symbol]                       0x08001a2c   Section        0  gesture_1.o(.text.Gesture_ComputePitch)
+    [Anonymous Symbol]                       0x08001ab8   Section        0  gesture_1.o(.text.Gesture_ComputeRoll)
+    [Anonymous Symbol]                       0x08001af0   Section        0  gesture_1.o(.text.Gesture_Init)
+    [Anonymous Symbol]                       0x08001b2c   Section        0  gesture_1.o(.text.Gesture_Update)
+    [Anonymous Symbol]                       0x08001d94   Section        0  i2c1_bus.o(.text.I2C1_Init)
+    [Anonymous Symbol]                       0x08001e64   Section        0  i2c1_bus.o(.text.I2C1_ReadRegister)
+    [Anonymous Symbol]                       0x08001fb4   Section        0  i2c1_bus.o(.text.I2C1_WriteControlData)
+    [Anonymous Symbol]                       0x080020a4   Section        0  i2c1_bus.o(.text.I2C1_WriteRegister)
+    IsCellOccupiedByItem                     0x08002195   Thumb Code   148  snake_game_1.o(.text.IsCellOccupiedByItem)
+    [Anonymous Symbol]                       0x08002194   Section        0  snake_game_1.o(.text.IsCellOccupiedByItem)
+    IsCellOccupiedBySnake                    0x08002229   Thumb Code   114  snake_game_1.o(.text.IsCellOccupiedBySnake)
+    [Anonymous Symbol]                       0x08002228   Section        0  snake_game_1.o(.text.IsCellOccupiedBySnake)
+    LCD_PrintTemp                            0x0800229d   Thumb Code   130  app_1.o(.text.LCD_PrintTemp)
+    [Anonymous Symbol]                       0x0800229c   Section        0  app_1.o(.text.LCD_PrintTemp)
+    [Anonymous Symbol]                       0x08002320   Section        0  mpu6500.o(.text.MPU6500_Init)
+    [Anonymous Symbol]                       0x08002330   Section        0  mpu6500.o(.text.MPU6500_Read16)
+    [Anonymous Symbol]                       0x08002370   Section        0  mpu6500.o(.text.MPU6500_ReadAccelRaw)
+    [Anonymous Symbol]                       0x0800239c   Section        0  mpu6500.o(.text.MPU6500_ReadGyroRaw)
+    [Anonymous Symbol]                       0x080023c8   Section        0  mpu6500.o(.text.MPU6500_ReadWhoAmI)
+    [Anonymous Symbol]                       0x080023d4   Section        0  oled.o(.text.OLED_Clear)
+    [Anonymous Symbol]                       0x08002430   Section        0  oled.o(.text.OLED_Command)
+    [Anonymous Symbol]                       0x08002448   Section        0  oled.o(.text.OLED_Data)
+    [Anonymous Symbol]                       0x08002460   Section        0  oled.o(.text.OLED_Init)
+    [Anonymous Symbol]                       0x0800251c   Section        0  oled.o(.text.OLED_PrintChar)
+    [Anonymous Symbol]                       0x08002550   Section        0  oled.o(.text.OLED_PrintCharASCII)
+    [Anonymous Symbol]                       0x080025b8   Section        0  oled.o(.text.OLED_PrintString)
+    [Anonymous Symbol]                       0x080025dc   Section        0  oled.o(.text.OLED_SetCursor)
+    [Anonymous Symbol]                       0x08002610   Section        0  my_ds18s20.o(.text.OneWire_Init)
+    PlaceObstacles                           0x08002645   Thumb Code   168  snake_game_1.o(.text.PlaceObstacles)
+    [Anonymous Symbol]                       0x08002644   Section        0  snake_game_1.o(.text.PlaceObstacles)
+    ProcessPlayingButtons                    0x080026ed   Thumb Code   114  app_1.o(.text.ProcessPlayingButtons)
+    [Anonymous Symbol]                       0x080026ec   Section        0  app_1.o(.text.ProcessPlayingButtons)
+    ProcessPlayingTilt                       0x08002761   Thumb Code    66  app_1.o(.text.ProcessPlayingTilt)
+    [Anonymous Symbol]                       0x08002760   Section        0  app_1.o(.text.ProcessPlayingTilt)
+    ReadButtonPresses                        0x080027a5   Thumb Code   210  app_1.o(.text.ReadButtonPresses)
+    [Anonymous Symbol]                       0x080027a4   Section        0  app_1.o(.text.ReadButtonPresses)
+    ReadButtonsHeld                          0x08002879   Thumb Code   106  app_1.o(.text.ReadButtonsHeld)
+    [Anonymous Symbol]                       0x08002878   Section        0  app_1.o(.text.ReadButtonsHeld)
+    ReadMPU                                  0x080028e5   Thumb Code    46  app_1.o(.text.ReadMPU)
+    [Anonymous Symbol]                       0x080028e4   Section        0  app_1.o(.text.ReadMPU)
+    ReadTemperature                          0x08002915   Thumb Code    56  app_1.o(.text.ReadTemperature)
+    [Anonymous Symbol]                       0x08002914   Section        0  app_1.o(.text.ReadTemperature)
+    [Anonymous Symbol]                       0x0800294c   Section        0  snake_game_1.o(.text.SnakeGame_GetSpeedMs)
+    [Anonymous Symbol]                       0x0800298c   Section        0  snake_game_1.o(.text.SnakeGame_Init)
+    [Anonymous Symbol]                       0x08002a44   Section        0  snake_game_1.o(.text.SnakeGame_IsObstacle)
+    [Anonymous Symbol]                       0x08002ad4   Section        0  snake_game_1.o(.text.SnakeGame_IsPlayable)
+    [Anonymous Symbol]                       0x08002b20   Section        0  snake_game_1.o(.text.SnakeGame_PlaceDanger)
+    [Anonymous Symbol]                       0x08002c78   Section        0  snake_game_1.o(.text.SnakeGame_PlaceEnd)
+    [Anonymous Symbol]                       0x08002dd0   Section        0  snake_game_1.o(.text.SnakeGame_PlaceFood)
+    [Anonymous Symbol]                       0x08002f84   Section        0  snake_game_1.o(.text.SnakeGame_SetDirection)
+    [Anonymous Symbol]                       0x08002ff8   Section        0  snake_game_1.o(.text.SnakeGame_Update)
+    [Anonymous Symbol]                       0x0800327c   Section        0  snake_game_1.o(.text.SnakeGame_UpdateLevel)
+    [Anonymous Symbol]                       0x080032bc   Section        0  snake_render_1.o(.text.SnakeRender_Draw)
+    [Anonymous Symbol]                       0x080033ac   Section        0  snake_render_1.o(.text.SnakeRender_DrawBorder)
+    [Anonymous Symbol]                       0x0800341c   Section        0  snake_render_1.o(.text.SnakeRender_Init)
+    [Anonymous Symbol]                       0x08003444   Section        0  snake_render_1.o(.text.SnakeRender_Reset)
+    [Anonymous Symbol]                       0x08003458   Section        0  timer.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x08003468   Section        0  system_stm32f4xx.o(.text.SystemCoreClockUpdate)
+    [Anonymous Symbol]                       0x08003598   Section        0  system_stm32f4xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x080035b8   Section        0  timer_delay.o(.text.TIM2_IRQHandler)
+    [Anonymous Symbol]                       0x080035ec   Section        0  timer_delay.o(.text.TIM2_Init_1ms)
+    [Anonymous Symbol]                       0x08003664   Section        0  uart.o(.text.USART2_IRQHandler)
+    [Anonymous Symbol]                       0x0800369c   Section        0  stm32f4xx_usart.o(.text.USART_GetFlagStatus)
+    [Anonymous Symbol]                       0x080036e0   Section        0  stm32f4xx_usart.o(.text.USART_ReceiveData)
+    UpdateLCD                                0x080036f1   Thumb Code   430  app_1.o(.text.UpdateLCD)
+    [Anonymous Symbol]                       0x080036f0   Section        0  app_1.o(.text.UpdateLCD)
+    __NVIC_ClearPendingIRQ                   0x080038a1   Thumb Code    48  gpio.o(.text.__NVIC_ClearPendingIRQ)
+    [Anonymous Symbol]                       0x080038a0   Section        0  gpio.o(.text.__NVIC_ClearPendingIRQ)
+    __NVIC_ClearPendingIRQ                   0x080038d1   Thumb Code    48  uart.o(.text.__NVIC_ClearPendingIRQ)
+    [Anonymous Symbol]                       0x080038d0   Section        0  uart.o(.text.__NVIC_ClearPendingIRQ)
+    __NVIC_EnableIRQ                         0x08003901   Thumb Code    48  timer_delay.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08003900   Section        0  timer_delay.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x08003931   Thumb Code    66  timer_delay.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08003930   Section        0  timer_delay.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08003974   Section        0  timer_delay.o(.text.delayMs)
+    [Anonymous Symbol]                       0x080039a4   Section        0  delay.o(.text.delay_cycles)
+    [Anonymous Symbol]                       0x080039b0   Section        0  delay.o(.text.delay_ms)
+    [Anonymous Symbol]                       0x08003a08   Section        0  delay.o(.text.delay_us)
+    [Anonymous Symbol]                       0x08003a64   Section        0  gpio.o(.text.gpio_set)
+    [Anonymous Symbol]                       0x08003a9c   Section        0  gpio.o(.text.gpio_set_mode)
+    [Anonymous Symbol]                       0x08003be0   Section        0  utils_1.o(.text.intToStr)
+    [Anonymous Symbol]                       0x08003cc4   Section        0  lcd.o(.text.lcd_init)
+    [Anonymous Symbol]                       0x08003d84   Section        0  lcd.o(.text.lcd_print)
+    [Anonymous Symbol]                       0x08003dcc   Section        0  lcd.o(.text.lcd_put_char)
+    [Anonymous Symbol]                       0x08003e64   Section        0  lcd.o(.text.lcd_set_cursor)
+    [Anonymous Symbol]                       0x08003e84   Section        0  lcd.o(.text.lcd_write_cmd)
+    [Anonymous Symbol]                       0x08003f18   Section        0  demo_main.o(.text.main)
+    ow_delay_us                              0x08003f81   Thumb Code   138  my_ds18s20.o(.text.ow_delay_us)
+    [Anonymous Symbol]                       0x08003f80   Section        0  my_ds18s20.o(.text.ow_delay_us)
+    ow_pin_input                             0x0800400d   Thumb Code    30  my_ds18s20.o(.text.ow_pin_input)
+    [Anonymous Symbol]                       0x0800400c   Section        0  my_ds18s20.o(.text.ow_pin_input)
+    ow_pin_output_low                        0x0800402d   Thumb Code    50  my_ds18s20.o(.text.ow_pin_output_low)
+    [Anonymous Symbol]                       0x0800402c   Section        0  my_ds18s20.o(.text.ow_pin_output_low)
+    ow_read_bit                              0x08004061   Thumb Code    54  my_ds18s20.o(.text.ow_read_bit)
+    [Anonymous Symbol]                       0x08004060   Section        0  my_ds18s20.o(.text.ow_read_bit)
+    ow_read_byte                             0x08004099   Thumb Code    80  my_ds18s20.o(.text.ow_read_byte)
+    [Anonymous Symbol]                       0x08004098   Section        0  my_ds18s20.o(.text.ow_read_byte)
+    ow_reset                                 0x080040e9   Thumb Code    60  my_ds18s20.o(.text.ow_reset)
+    [Anonymous Symbol]                       0x080040e8   Section        0  my_ds18s20.o(.text.ow_reset)
+    ow_write_bit                             0x08004125   Thumb Code    64  my_ds18s20.o(.text.ow_write_bit)
+    [Anonymous Symbol]                       0x08004124   Section        0  my_ds18s20.o(.text.ow_write_bit)
+    ow_write_byte                            0x08004165   Thumb Code    66  my_ds18s20.o(.text.ow_write_byte)
+    [Anonymous Symbol]                       0x08004164   Section        0  my_ds18s20.o(.text.ow_write_byte)
+    simple_random                            0x080041a9   Thumb Code    38  snake_game_1.o(.text.simple_random)
+    [Anonymous Symbol]                       0x080041a8   Section        0  snake_game_1.o(.text.simple_random)
+    [Anonymous Symbol]                       0x080041d0   Section        0  uart.o(.text.uart_rx)
+    i.__ARM_fpclassifyf                      0x08004202   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__hardfp_atan2f                        0x08004228   Section        0  atan2f.o(i.__hardfp_atan2f)
+    i.__hardfp_sqrtf                         0x080044d4   Section        0  sqrtf.o(i.__hardfp_sqrtf)
+    i.__mathlib_flt_infnan2                  0x0800450e   Section        0  funder.o(i.__mathlib_flt_infnan2)
+    i.__mathlib_flt_underflow                0x08004514   Section        0  funder.o(i.__mathlib_flt_underflow)
+    $v0                                      0x08004524   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x08004524   Section       26  fpinit.o(x$fpl$fpinit)
+    x$fpl$usenofp                            0x0800453e   Section        0  usenofp.o(x$fpl$usenofp)
+    __tagsym$$used.0                         0x08004550   Number         0  eventrecorder.o(.rodata.EventRecorderInfo)
+    P_DANGER_EVEN                            0x08004743   Data           4  snake_render_1.o(.rodata.P_DANGER_EVEN)
+    [Anonymous Symbol]                       0x08004743   Section        0  snake_render_1.o(.rodata.P_DANGER_EVEN)
+    P_DANGER_ODD                             0x08004747   Data           4  snake_render_1.o(.rodata.P_DANGER_ODD)
+    [Anonymous Symbol]                       0x08004747   Section        0  snake_render_1.o(.rodata.P_DANGER_ODD)
+    P_END_EVEN                               0x0800474b   Data           4  snake_render_1.o(.rodata.P_END_EVEN)
+    [Anonymous Symbol]                       0x0800474b   Section        0  snake_render_1.o(.rodata.P_END_EVEN)
+    P_END_ODD                                0x0800474f   Data           4  snake_render_1.o(.rodata.P_END_ODD)
+    [Anonymous Symbol]                       0x0800474f   Section        0  snake_render_1.o(.rodata.P_END_ODD)
+    P_FOOD_EVEN                              0x08004753   Data           4  snake_render_1.o(.rodata.P_FOOD_EVEN)
+    [Anonymous Symbol]                       0x08004753   Section        0  snake_render_1.o(.rodata.P_FOOD_EVEN)
+    P_FOOD_ODD                               0x08004757   Data           4  snake_render_1.o(.rodata.P_FOOD_ODD)
+    [Anonymous Symbol]                       0x08004757   Section        0  snake_render_1.o(.rodata.P_FOOD_ODD)
+    P_HEAD_EVEN                              0x0800475b   Data           4  snake_render_1.o(.rodata.P_HEAD_EVEN)
+    [Anonymous Symbol]                       0x0800475b   Section        0  snake_render_1.o(.rodata.P_HEAD_EVEN)
+    P_HEAD_ODD                               0x0800475f   Data           4  snake_render_1.o(.rodata.P_HEAD_ODD)
+    [Anonymous Symbol]                       0x0800475f   Section        0  snake_render_1.o(.rodata.P_HEAD_ODD)
+    P_SNAKE_EVEN                             0x08004763   Data           4  snake_render_1.o(.rodata.P_SNAKE_EVEN)
+    [Anonymous Symbol]                       0x08004763   Section        0  snake_render_1.o(.rodata.P_SNAKE_EVEN)
+    P_SNAKE_ODD                              0x08004767   Data           4  snake_render_1.o(.rodata.P_SNAKE_ODD)
+    [Anonymous Symbol]                       0x08004767   Section        0  snake_render_1.o(.rodata.P_SNAKE_ODD)
+    P_WALL_EVEN                              0x0800476b   Data           4  snake_render_1.o(.rodata.P_WALL_EVEN)
+    [Anonymous Symbol]                       0x0800476b   Section        0  snake_render_1.o(.rodata.P_WALL_EVEN)
+    P_WALL_ODD                               0x0800476f   Data           4  snake_render_1.o(.rodata.P_WALL_ODD)
+    [Anonymous Symbol]                       0x0800476f   Section        0  snake_render_1.o(.rodata.P_WALL_ODD)
+    .L.str.29                                0x08004778   Data          17  app_1.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08004778   Section        0  app_1.o(.rodata.str1.1)
+    .L.str.31                                0x08004789   Data          17  app_1.o(.rodata.str1.1)
+    .L.str.25                                0x08004795   Data           5  app_1.o(.rodata.str1.1)
+    .L.str.11                                0x08004796   Data           4  app_1.o(.rodata.str1.1)
+    .L.str.26                                0x0800479a   Data          17  app_1.o(.rodata.str1.1)
+    .L.str.48                                0x080047ab   Data           8  app_1.o(.rodata.str1.1)
+    .L.str.4                                 0x080047b3   Data           6  app_1.o(.rodata.str1.1)
+    .L.str.28                                0x080047b6   Data           3  app_1.o(.rodata.str1.1)
+    .L.str.47                                0x080047b9   Data           8  app_1.o(.rodata.str1.1)
+    .L.str.5                                 0x080047c1   Data           7  app_1.o(.rodata.str1.1)
+    .L.str.6                                 0x080047c8   Data           7  app_1.o(.rodata.str1.1)
+    .L.str.7                                 0x080047cf   Data           7  app_1.o(.rodata.str1.1)
+    .L.str.8                                 0x080047d6   Data           7  app_1.o(.rodata.str1.1)
+    .L.str                                   0x080047dd   Data           7  app_1.o(.rodata.str1.1)
+    .L.str.38                                0x080047e2   Data           2  app_1.o(.rodata.str1.1)
+    .L.str.12                                0x080047e4   Data          12  app_1.o(.rodata.str1.1)
+    .L.str.33                                0x080047f0   Data          18  app_1.o(.rodata.str1.1)
+    .L.str.34                                0x08004802   Data          15  app_1.o(.rodata.str1.1)
+    .L.str.2                                 0x08004811   Data           2  app_1.o(.rodata.str1.1)
+    .L.str.23                                0x08004864   Data           3  app_1.o(.rodata.str1.1)
+    .L.str.27                                0x08004867   Data           4  app_1.o(.rodata.str1.1)
+    .L.str.10                                0x0800486b   Data           4  app_1.o(.rodata.str1.1)
+    .L.str.9                                 0x0800486f   Data           3  app_1.o(.rodata.str1.1)
+    .L.str.30                                0x08004872   Data          12  app_1.o(.rodata.str1.1)
+    .L.str.24                                0x0800487a   Data           4  app_1.o(.rodata.str1.1)
+    .L.str.1                                 0x0800487e   Data          13  app_1.o(.rodata.str1.1)
+    .L.str.43                                0x0800488b   Data          15  app_1.o(.rodata.str1.1)
+    .L.str.32                                0x0800489a   Data          19  app_1.o(.rodata.str1.1)
+    .L.str.46                                0x080048ad   Data          18  app_1.o(.rodata.str1.1)
+    .L.str.37                                0x080048bf   Data           2  app_1.o(.rodata.str1.1)
+    .L.str.3                                 0x080048c1   Data           2  app_1.o(.rodata.str1.1)
+    .L.str.39                                0x080048c3   Data          14  app_1.o(.rodata.str1.1)
+    .L.str.35                                0x080048d1   Data          16  app_1.o(.rodata.str1.1)
+    .L.str.13                                0x080048e1   Data          17  app_1.o(.rodata.str1.1)
+    .L.str.44                                0x080048f2   Data          11  app_1.o(.rodata.str1.1)
+    .L.str.36                                0x080048fd   Data          17  app_1.o(.rodata.str1.1)
+    .L.str.42                                0x0800490e   Data          19  app_1.o(.rodata.str1.1)
+    .L.str.41                                0x08004921   Data          17  app_1.o(.rodata.str1.1)
+    .L.str.40                                0x08004932   Data          17  app_1.o(.rodata.str1.1)
+    .L.str.49                                0x08004943   Data          12  app_1.o(.rodata.str1.1)
+    .L.str.45                                0x0800494f   Data           9  app_1.o(.rodata.str1.1)
     App_Run.startup_stage_drawn              0x20000000   Data           1  app_1.o(.data.App_Run.startup_stage_drawn)
     [Anonymous Symbol]                       0x20000000   Section        0  app_1.o(.data.App_Run.startup_stage_drawn)
     member_bupt_ids                          0x20000018   Data          12  app_1.o(.data.member_bupt_ids)
@@ -2013,7 +2019,7 @@ Image Symbol Table
     [Anonymous Symbol]                       0x200000ce   Section        0  snake_render_1.o(.bss.fb)
     fb_last                                  0x200004ce   Data        1024  snake_render_1.o(.bss.fb_last)
     [Anonymous Symbol]                       0x200004ce   Section        0  snake_render_1.o(.bss.fb_last)
-    main.app                                 0x200008d0   Data         380  demo_main.o(.bss.main.app)
+    main.app                                 0x200008d0   Data         384  demo_main.o(.bss.main.app)
     [Anonymous Symbol]                       0x200008d0   Section        0  demo_main.o(.bss.main.app)
     EventBuffer                              0x20000a80   Data        1024  eventrecorder.o(.bss.noinit)
     [Anonymous Symbol]                       0x20000a80   Section        0  eventrecorder.o(.bss.noinit)
@@ -2196,97 +2202,97 @@ Image Symbol Table
     __use_no_semihosting_swi                 0x080003c9   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x080003cb   Thumb Code     0  indicate_semi.o(.text)
     App_Init                                 0x080003cd   Thumb Code   202  app_1.o(.text.App_Init)
-    App_Run                                  0x08000499   Thumb Code  2466  app_1.o(.text.App_Run)
-    Button_AS_Pressed                        0x08000e3d   Thumb Code    22  buttons.o(.text.Button_AS_Pressed)
-    Button_DOWN_Pressed                      0x08000e55   Thumb Code    22  buttons.o(.text.Button_DOWN_Pressed)
-    Button_Sharp_Pressed                     0x08000e6d   Thumb Code    22  buttons.o(.text.Button_Sharp_Pressed)
-    Button_UP_Pressed                        0x08000e85   Thumb Code    22  buttons.o(.text.Button_UP_Pressed)
-    Buttons_Init                             0x08000e9d   Thumb Code    68  buttons.o(.text.Buttons_Init)
-    DS18S20_ReadTemp_x10_Now                 0x08000ee1   Thumb Code   108  my_ds18s20.o(.text.DS18S20_ReadTemp_x10_Now)
-    DS18S20_StartConversion                  0x08000f4d   Thumb Code    82  my_ds18s20.o(.text.DS18S20_StartConversion)
-    DS18S20_Tick_1ms                         0x08000fa1   Thumb Code    88  my_ds18s20.o(.text.DS18S20_Tick_1ms)
-    DWT_Delay_Init                           0x08000ff9   Thumb Code    34  timer_delay.o(.text.DWT_Delay_Init)
-    EXTI0_IRQHandler                         0x0800138d   Thumb Code   132  gpio.o(.text.EXTI0_IRQHandler)
-    EXTI15_10_IRQHandler                     0x08001411   Thumb Code   132  gpio.o(.text.EXTI15_10_IRQHandler)
-    EXTI1_IRQHandler                         0x08001495   Thumb Code   132  gpio.o(.text.EXTI1_IRQHandler)
-    EXTI2_IRQHandler                         0x08001519   Thumb Code   132  gpio.o(.text.EXTI2_IRQHandler)
-    EXTI3_IRQHandler                         0x0800159d   Thumb Code   132  gpio.o(.text.EXTI3_IRQHandler)
-    EXTI4_IRQHandler                         0x08001621   Thumb Code   132  gpio.o(.text.EXTI4_IRQHandler)
-    EXTI9_5_IRQHandler                       0x080016a5   Thumb Code   132  gpio.o(.text.EXTI9_5_IRQHandler)
-    Gesture_Calibrate                        0x080018dd   Thumb Code   110  gesture_1.o(.text.Gesture_Calibrate)
-    Gesture_ComputePitch                     0x0800194d   Thumb Code   132  gesture_1.o(.text.Gesture_ComputePitch)
-    Gesture_ComputeRoll                      0x080019d9   Thumb Code    52  gesture_1.o(.text.Gesture_ComputeRoll)
-    Gesture_Init                             0x08001a11   Thumb Code    54  gesture_1.o(.text.Gesture_Init)
-    Gesture_Update                           0x08001a49   Thumb Code   540  gesture_1.o(.text.Gesture_Update)
-    I2C1_Init                                0x08001c6d   Thumb Code   206  i2c1_bus.o(.text.I2C1_Init)
-    I2C1_ReadRegister                        0x08001d3d   Thumb Code   336  i2c1_bus.o(.text.I2C1_ReadRegister)
-    I2C1_WriteControlData                    0x08001e8d   Thumb Code   238  i2c1_bus.o(.text.I2C1_WriteControlData)
-    I2C1_WriteRegister                       0x08001f7d   Thumb Code   238  i2c1_bus.o(.text.I2C1_WriteRegister)
-    MPU6500_Init                             0x080021f9   Thumb Code    14  mpu6500.o(.text.MPU6500_Init)
-    MPU6500_Read16                           0x08002209   Thumb Code    62  mpu6500.o(.text.MPU6500_Read16)
-    MPU6500_ReadAccelRaw                     0x08002249   Thumb Code    44  mpu6500.o(.text.MPU6500_ReadAccelRaw)
-    MPU6500_ReadGyroRaw                      0x08002275   Thumb Code    44  mpu6500.o(.text.MPU6500_ReadGyroRaw)
-    MPU6500_ReadWhoAmI                       0x080022a1   Thumb Code    12  mpu6500.o(.text.MPU6500_ReadWhoAmI)
-    OLED_Clear                               0x080022ad   Thumb Code    90  oled.o(.text.OLED_Clear)
-    OLED_Command                             0x08002309   Thumb Code    24  oled.o(.text.OLED_Command)
-    OLED_Data                                0x08002321   Thumb Code    24  oled.o(.text.OLED_Data)
-    OLED_Init                                0x08002339   Thumb Code   186  oled.o(.text.OLED_Init)
-    OLED_PrintChar                           0x080023f5   Thumb Code    50  oled.o(.text.OLED_PrintChar)
-    OLED_PrintCharASCII                      0x08002429   Thumb Code   102  oled.o(.text.OLED_PrintCharASCII)
-    OLED_PrintString                         0x08002491   Thumb Code    36  oled.o(.text.OLED_PrintString)
-    OLED_SetCursor                           0x080024b5   Thumb Code    52  oled.o(.text.OLED_SetCursor)
-    OneWire_Init                             0x080024e9   Thumb Code    50  my_ds18s20.o(.text.OneWire_Init)
-    SnakeGame_GetSpeedMs                     0x08002825   Thumb Code    62  snake_game_1.o(.text.SnakeGame_GetSpeedMs)
-    SnakeGame_Init                           0x08002865   Thumb Code   184  snake_game_1.o(.text.SnakeGame_Init)
-    SnakeGame_IsObstacle                     0x0800291d   Thumb Code   144  snake_game_1.o(.text.SnakeGame_IsObstacle)
-    SnakeGame_IsPlayable                     0x080029ad   Thumb Code    74  snake_game_1.o(.text.SnakeGame_IsPlayable)
-    SnakeGame_PlaceDanger                    0x080029f9   Thumb Code   342  snake_game_1.o(.text.SnakeGame_PlaceDanger)
-    SnakeGame_PlaceEnd                       0x08002b51   Thumb Code   342  snake_game_1.o(.text.SnakeGame_PlaceEnd)
-    SnakeGame_PlaceFood                      0x08002ca9   Thumb Code   434  snake_game_1.o(.text.SnakeGame_PlaceFood)
-    SnakeGame_SetDirection                   0x08002e5d   Thumb Code   116  snake_game_1.o(.text.SnakeGame_SetDirection)
-    SnakeGame_Update                         0x08002ed1   Thumb Code   644  snake_game_1.o(.text.SnakeGame_Update)
-    SnakeGame_UpdateLevel                    0x08003155   Thumb Code    64  snake_game_1.o(.text.SnakeGame_UpdateLevel)
-    SnakeRender_Draw                         0x08003195   Thumb Code   238  snake_render_1.o(.text.SnakeRender_Draw)
-    SnakeRender_DrawBorder                   0x08003285   Thumb Code   112  snake_render_1.o(.text.SnakeRender_DrawBorder)
-    SnakeRender_Init                         0x080032f5   Thumb Code    40  snake_render_1.o(.text.SnakeRender_Init)
-    SnakeRender_Reset                        0x0800331d   Thumb Code    20  snake_render_1.o(.text.SnakeRender_Reset)
-    SysTick_Handler                          0x08003331   Thumb Code    16  timer.o(.text.SysTick_Handler)
-    SystemCoreClockUpdate                    0x08003341   Thumb Code   302  system_stm32f4xx.o(.text.SystemCoreClockUpdate)
-    SystemInit                               0x08003471   Thumb Code    32  system_stm32f4xx.o(.text.SystemInit)
-    TIM2_IRQHandler                          0x08003491   Thumb Code    52  timer_delay.o(.text.TIM2_IRQHandler)
-    TIM2_Init_1ms                            0x080034c5   Thumb Code   120  timer_delay.o(.text.TIM2_Init_1ms)
-    USART2_IRQHandler                        0x0800353d   Thumb Code    54  uart.o(.text.USART2_IRQHandler)
-    USART_GetFlagStatus                      0x08003575   Thumb Code    66  stm32f4xx_usart.o(.text.USART_GetFlagStatus)
-    USART_ReceiveData                        0x080035b9   Thumb Code    16  stm32f4xx_usart.o(.text.USART_ReceiveData)
-    delayMs                                  0x0800384d   Thumb Code    48  timer_delay.o(.text.delayMs)
-    delay_cycles                             0x0800387d   Thumb Code    12  delay.o(.text.delay_cycles)
-    delay_ms                                 0x08003889   Thumb Code    86  delay.o(.text.delay_ms)
-    delay_us                                 0x080038e1   Thumb Code    90  delay.o(.text.delay_us)
-    gpio_set                                 0x0800393d   Thumb Code    54  gpio.o(.text.gpio_set)
-    gpio_set_mode                            0x08003975   Thumb Code   322  gpio.o(.text.gpio_set_mode)
-    intToStr                                 0x08003ab9   Thumb Code   228  utils_1.o(.text.intToStr)
-    lcd_init                                 0x08003b9d   Thumb Code   190  lcd.o(.text.lcd_init)
-    lcd_print                                0x08003c5d   Thumb Code    72  lcd.o(.text.lcd_print)
-    lcd_put_char                             0x08003ca5   Thumb Code   150  lcd.o(.text.lcd_put_char)
-    lcd_set_cursor                           0x08003d3d   Thumb Code    30  lcd.o(.text.lcd_set_cursor)
-    lcd_write_cmd                            0x08003d5d   Thumb Code   146  lcd.o(.text.lcd_write_cmd)
-    main                                     0x08003df1   Thumb Code   102  demo_main.o(.text.main)
-    uart_rx                                  0x080040a9   Thumb Code    50  uart.o(.text.uart_rx)
-    __ARM_fpclassifyf                        0x080040db   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
-    __hardfp_atan2f                          0x08004101   Thumb Code   594  atan2f.o(i.__hardfp_atan2f)
-    __hardfp_sqrtf                           0x080043ad   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
-    __mathlib_flt_infnan2                    0x080043e7   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
-    __mathlib_flt_underflow                  0x080043ed   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
-    _fp_init                                 0x080043fd   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08004415   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08004415   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    AHBPrescTable                            0x08004416   Data          16  system_stm32f4xx.o(.rodata.AHBPrescTable)
-    __I$use$fp                               0x08004416   Number         0  usenofp.o(x$fpl$usenofp)
-    EventRecorderInfo                        0x08004428   Data          24  eventrecorder.o(.rodata.EventRecorderInfo)
-    Font5x7                                  0x08004440   Data         475  foun5x7.o(.rodata.Font5x7)
-    font_degree                              0x0800464b   Data           5  foun5x7.o(.rodata.font_degree)
-    Region$$Table$$Base                      0x0800480c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800482c   Number         0  anon$$obj.o(Region$$Table)
+    App_Run                                  0x08000499   Thumb Code  2686  app_1.o(.text.App_Run)
+    Button_AS_Pressed                        0x08000f19   Thumb Code    22  buttons.o(.text.Button_AS_Pressed)
+    Button_DOWN_Pressed                      0x08000f31   Thumb Code    22  buttons.o(.text.Button_DOWN_Pressed)
+    Button_Sharp_Pressed                     0x08000f49   Thumb Code    22  buttons.o(.text.Button_Sharp_Pressed)
+    Button_UP_Pressed                        0x08000f61   Thumb Code    22  buttons.o(.text.Button_UP_Pressed)
+    Buttons_Init                             0x08000f79   Thumb Code    68  buttons.o(.text.Buttons_Init)
+    DS18S20_ReadTemp_x10_Now                 0x08000fbd   Thumb Code   108  my_ds18s20.o(.text.DS18S20_ReadTemp_x10_Now)
+    DS18S20_StartConversion                  0x08001029   Thumb Code    82  my_ds18s20.o(.text.DS18S20_StartConversion)
+    DS18S20_Tick_1ms                         0x0800107d   Thumb Code    88  my_ds18s20.o(.text.DS18S20_Tick_1ms)
+    DWT_Delay_Init                           0x080010d5   Thumb Code    34  timer_delay.o(.text.DWT_Delay_Init)
+    EXTI0_IRQHandler                         0x08001469   Thumb Code   132  gpio.o(.text.EXTI0_IRQHandler)
+    EXTI15_10_IRQHandler                     0x080014ed   Thumb Code   132  gpio.o(.text.EXTI15_10_IRQHandler)
+    EXTI1_IRQHandler                         0x08001571   Thumb Code   132  gpio.o(.text.EXTI1_IRQHandler)
+    EXTI2_IRQHandler                         0x080015f5   Thumb Code   132  gpio.o(.text.EXTI2_IRQHandler)
+    EXTI3_IRQHandler                         0x08001679   Thumb Code   132  gpio.o(.text.EXTI3_IRQHandler)
+    EXTI4_IRQHandler                         0x080016fd   Thumb Code   132  gpio.o(.text.EXTI4_IRQHandler)
+    EXTI9_5_IRQHandler                       0x08001781   Thumb Code   132  gpio.o(.text.EXTI9_5_IRQHandler)
+    Gesture_Calibrate                        0x080019b9   Thumb Code   114  gesture_1.o(.text.Gesture_Calibrate)
+    Gesture_ComputePitch                     0x08001a2d   Thumb Code   132  gesture_1.o(.text.Gesture_ComputePitch)
+    Gesture_ComputeRoll                      0x08001ab9   Thumb Code    52  gesture_1.o(.text.Gesture_ComputeRoll)
+    Gesture_Init                             0x08001af1   Thumb Code    60  gesture_1.o(.text.Gesture_Init)
+    Gesture_Update                           0x08001b2d   Thumb Code   616  gesture_1.o(.text.Gesture_Update)
+    I2C1_Init                                0x08001d95   Thumb Code   206  i2c1_bus.o(.text.I2C1_Init)
+    I2C1_ReadRegister                        0x08001e65   Thumb Code   336  i2c1_bus.o(.text.I2C1_ReadRegister)
+    I2C1_WriteControlData                    0x08001fb5   Thumb Code   238  i2c1_bus.o(.text.I2C1_WriteControlData)
+    I2C1_WriteRegister                       0x080020a5   Thumb Code   238  i2c1_bus.o(.text.I2C1_WriteRegister)
+    MPU6500_Init                             0x08002321   Thumb Code    14  mpu6500.o(.text.MPU6500_Init)
+    MPU6500_Read16                           0x08002331   Thumb Code    62  mpu6500.o(.text.MPU6500_Read16)
+    MPU6500_ReadAccelRaw                     0x08002371   Thumb Code    44  mpu6500.o(.text.MPU6500_ReadAccelRaw)
+    MPU6500_ReadGyroRaw                      0x0800239d   Thumb Code    44  mpu6500.o(.text.MPU6500_ReadGyroRaw)
+    MPU6500_ReadWhoAmI                       0x080023c9   Thumb Code    12  mpu6500.o(.text.MPU6500_ReadWhoAmI)
+    OLED_Clear                               0x080023d5   Thumb Code    90  oled.o(.text.OLED_Clear)
+    OLED_Command                             0x08002431   Thumb Code    24  oled.o(.text.OLED_Command)
+    OLED_Data                                0x08002449   Thumb Code    24  oled.o(.text.OLED_Data)
+    OLED_Init                                0x08002461   Thumb Code   186  oled.o(.text.OLED_Init)
+    OLED_PrintChar                           0x0800251d   Thumb Code    50  oled.o(.text.OLED_PrintChar)
+    OLED_PrintCharASCII                      0x08002551   Thumb Code   102  oled.o(.text.OLED_PrintCharASCII)
+    OLED_PrintString                         0x080025b9   Thumb Code    36  oled.o(.text.OLED_PrintString)
+    OLED_SetCursor                           0x080025dd   Thumb Code    52  oled.o(.text.OLED_SetCursor)
+    OneWire_Init                             0x08002611   Thumb Code    50  my_ds18s20.o(.text.OneWire_Init)
+    SnakeGame_GetSpeedMs                     0x0800294d   Thumb Code    62  snake_game_1.o(.text.SnakeGame_GetSpeedMs)
+    SnakeGame_Init                           0x0800298d   Thumb Code   184  snake_game_1.o(.text.SnakeGame_Init)
+    SnakeGame_IsObstacle                     0x08002a45   Thumb Code   144  snake_game_1.o(.text.SnakeGame_IsObstacle)
+    SnakeGame_IsPlayable                     0x08002ad5   Thumb Code    74  snake_game_1.o(.text.SnakeGame_IsPlayable)
+    SnakeGame_PlaceDanger                    0x08002b21   Thumb Code   342  snake_game_1.o(.text.SnakeGame_PlaceDanger)
+    SnakeGame_PlaceEnd                       0x08002c79   Thumb Code   342  snake_game_1.o(.text.SnakeGame_PlaceEnd)
+    SnakeGame_PlaceFood                      0x08002dd1   Thumb Code   434  snake_game_1.o(.text.SnakeGame_PlaceFood)
+    SnakeGame_SetDirection                   0x08002f85   Thumb Code   116  snake_game_1.o(.text.SnakeGame_SetDirection)
+    SnakeGame_Update                         0x08002ff9   Thumb Code   644  snake_game_1.o(.text.SnakeGame_Update)
+    SnakeGame_UpdateLevel                    0x0800327d   Thumb Code    64  snake_game_1.o(.text.SnakeGame_UpdateLevel)
+    SnakeRender_Draw                         0x080032bd   Thumb Code   238  snake_render_1.o(.text.SnakeRender_Draw)
+    SnakeRender_DrawBorder                   0x080033ad   Thumb Code   112  snake_render_1.o(.text.SnakeRender_DrawBorder)
+    SnakeRender_Init                         0x0800341d   Thumb Code    40  snake_render_1.o(.text.SnakeRender_Init)
+    SnakeRender_Reset                        0x08003445   Thumb Code    20  snake_render_1.o(.text.SnakeRender_Reset)
+    SysTick_Handler                          0x08003459   Thumb Code    16  timer.o(.text.SysTick_Handler)
+    SystemCoreClockUpdate                    0x08003469   Thumb Code   302  system_stm32f4xx.o(.text.SystemCoreClockUpdate)
+    SystemInit                               0x08003599   Thumb Code    32  system_stm32f4xx.o(.text.SystemInit)
+    TIM2_IRQHandler                          0x080035b9   Thumb Code    52  timer_delay.o(.text.TIM2_IRQHandler)
+    TIM2_Init_1ms                            0x080035ed   Thumb Code   120  timer_delay.o(.text.TIM2_Init_1ms)
+    USART2_IRQHandler                        0x08003665   Thumb Code    54  uart.o(.text.USART2_IRQHandler)
+    USART_GetFlagStatus                      0x0800369d   Thumb Code    66  stm32f4xx_usart.o(.text.USART_GetFlagStatus)
+    USART_ReceiveData                        0x080036e1   Thumb Code    16  stm32f4xx_usart.o(.text.USART_ReceiveData)
+    delayMs                                  0x08003975   Thumb Code    48  timer_delay.o(.text.delayMs)
+    delay_cycles                             0x080039a5   Thumb Code    12  delay.o(.text.delay_cycles)
+    delay_ms                                 0x080039b1   Thumb Code    86  delay.o(.text.delay_ms)
+    delay_us                                 0x08003a09   Thumb Code    90  delay.o(.text.delay_us)
+    gpio_set                                 0x08003a65   Thumb Code    54  gpio.o(.text.gpio_set)
+    gpio_set_mode                            0x08003a9d   Thumb Code   322  gpio.o(.text.gpio_set_mode)
+    intToStr                                 0x08003be1   Thumb Code   228  utils_1.o(.text.intToStr)
+    lcd_init                                 0x08003cc5   Thumb Code   190  lcd.o(.text.lcd_init)
+    lcd_print                                0x08003d85   Thumb Code    72  lcd.o(.text.lcd_print)
+    lcd_put_char                             0x08003dcd   Thumb Code   150  lcd.o(.text.lcd_put_char)
+    lcd_set_cursor                           0x08003e65   Thumb Code    30  lcd.o(.text.lcd_set_cursor)
+    lcd_write_cmd                            0x08003e85   Thumb Code   146  lcd.o(.text.lcd_write_cmd)
+    main                                     0x08003f19   Thumb Code   102  demo_main.o(.text.main)
+    uart_rx                                  0x080041d1   Thumb Code    50  uart.o(.text.uart_rx)
+    __ARM_fpclassifyf                        0x08004203   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
+    __hardfp_atan2f                          0x08004229   Thumb Code   594  atan2f.o(i.__hardfp_atan2f)
+    __hardfp_sqrtf                           0x080044d5   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
+    __mathlib_flt_infnan2                    0x0800450f   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
+    __mathlib_flt_underflow                  0x08004515   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
+    _fp_init                                 0x08004525   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x0800453d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x0800453d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    AHBPrescTable                            0x0800453e   Data          16  system_stm32f4xx.o(.rodata.AHBPrescTable)
+    __I$use$fp                               0x0800453e   Number         0  usenofp.o(x$fpl$usenofp)
+    EventRecorderInfo                        0x08004550   Data          24  eventrecorder.o(.rodata.EventRecorderInfo)
+    Font5x7                                  0x08004568   Data         475  foun5x7.o(.rodata.Font5x7)
+    font_degree                              0x08004773   Data           5  foun5x7.o(.rodata.font_degree)
+    Region$$Table$$Base                      0x08004958   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08004978   Number         0  anon$$obj.o(Region$$Table)
     P_LCD_DATA                               0x20000004   Data          16  lcd.o(.data.P_LCD_DATA)
     SystemCoreClock                          0x20000014   Data           4  system_stm32f4xx.o(.data.SystemCoreClock)
     __libspace_start                         0x20000040   Data          96  libspace.o(.bss)
@@ -2297,7 +2303,7 @@ Image Symbol Table
     char_num                                 0x200000c0   Data           4  lcd.o(.bss.char_num)
     ds18_ready                               0x200000c5   Data           1  my_ds18s20.o(.bss.ds18_ready)
     ds18_temp_x10                            0x200000c8   Data           4  my_ds18s20.o(.bss.ds18_temp_x10)
-    msTicks                                  0x20000a4c   Data           4  timer_delay.o(.bss.msTicks)
+    msTicks                                  0x20000a50   Data           4  timer_delay.o(.bss.msTicks)
 
 
 
@@ -2307,9 +2313,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000195
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004880, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000049c0, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000482c, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004978, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2380,215 +2386,213 @@ Memory Map of the image
     0x080003ca   0x080003ca   0x00000002   PAD
     0x080003cc   0x080003cc   0x000000ca   Code   RO          510    .text.App_Init      app_1.o
     0x08000496   0x08000496   0x00000002   PAD
-    0x08000498   0x08000498   0x000009a2   Code   RO          512    .text.App_Run       app_1.o
-    0x08000e3a   0x08000e3a   0x00000002   PAD
-    0x08000e3c   0x08000e3c   0x00000016   Code   RO          816    .text.Button_AS_Pressed  Demo_mini_Project.lib(buttons.o)
-    0x08000e52   0x08000e52   0x00000002   PAD
-    0x08000e54   0x08000e54   0x00000016   Code   RO          822    .text.Button_DOWN_Pressed  Demo_mini_Project.lib(buttons.o)
-    0x08000e6a   0x08000e6a   0x00000002   PAD
-    0x08000e6c   0x08000e6c   0x00000016   Code   RO          820    .text.Button_Sharp_Pressed  Demo_mini_Project.lib(buttons.o)
-    0x08000e82   0x08000e82   0x00000002   PAD
-    0x08000e84   0x08000e84   0x00000016   Code   RO          818    .text.Button_UP_Pressed  Demo_mini_Project.lib(buttons.o)
-    0x08000e9a   0x08000e9a   0x00000002   PAD
-    0x08000e9c   0x08000e9c   0x00000044   Code   RO          814    .text.Buttons_Init  Demo_mini_Project.lib(buttons.o)
-    0x08000ee0   0x08000ee0   0x0000006c   Code   RO          673    .text.DS18S20_ReadTemp_x10_Now  my_ds18s20.o
-    0x08000f4c   0x08000f4c   0x00000052   Code   RO          667    .text.DS18S20_StartConversion  my_ds18s20.o
-    0x08000f9e   0x08000f9e   0x00000002   PAD
-    0x08000fa0   0x08000fa0   0x00000058   Code   RO          663    .text.DS18S20_Tick_1ms  my_ds18s20.o
-    0x08000ff8   0x08000ff8   0x00000022   Code   RO          916    .text.DWT_Delay_Init  Demo_mini_Project.lib(timer_delay.o)
-    0x0800101a   0x0800101a   0x00000002   PAD
-    0x0800101c   0x0800101c   0x0000005e   Code   RO          524    .text.DrawCalibrateScreen  app_1.o
+    0x08000498   0x08000498   0x00000a7e   Code   RO          512    .text.App_Run       app_1.o
+    0x08000f16   0x08000f16   0x00000002   PAD
+    0x08000f18   0x08000f18   0x00000016   Code   RO          816    .text.Button_AS_Pressed  Demo_mini_Project.lib(buttons.o)
+    0x08000f2e   0x08000f2e   0x00000002   PAD
+    0x08000f30   0x08000f30   0x00000016   Code   RO          822    .text.Button_DOWN_Pressed  Demo_mini_Project.lib(buttons.o)
+    0x08000f46   0x08000f46   0x00000002   PAD
+    0x08000f48   0x08000f48   0x00000016   Code   RO          820    .text.Button_Sharp_Pressed  Demo_mini_Project.lib(buttons.o)
+    0x08000f5e   0x08000f5e   0x00000002   PAD
+    0x08000f60   0x08000f60   0x00000016   Code   RO          818    .text.Button_UP_Pressed  Demo_mini_Project.lib(buttons.o)
+    0x08000f76   0x08000f76   0x00000002   PAD
+    0x08000f78   0x08000f78   0x00000044   Code   RO          814    .text.Buttons_Init  Demo_mini_Project.lib(buttons.o)
+    0x08000fbc   0x08000fbc   0x0000006c   Code   RO          673    .text.DS18S20_ReadTemp_x10_Now  my_ds18s20.o
+    0x08001028   0x08001028   0x00000052   Code   RO          667    .text.DS18S20_StartConversion  my_ds18s20.o
     0x0800107a   0x0800107a   0x00000002   PAD
-    0x0800107c   0x0800107c   0x00000038   Code   RO          605    .text.DrawDanger    snake_render_1.o
-    0x080010b4   0x080010b4   0x00000038   Code   RO          607    .text.DrawEnd       snake_render_1.o
-    0x080010ec   0x080010ec   0x00000038   Code   RO          603    .text.DrawFood      snake_render_1.o
-    0x08001124   0x08001124   0x0000009c   Code   RO          536    .text.DrawGameOverScreen  app_1.o
-    0x080011c0   0x080011c0   0x00000090   Code   RO          518    .text.DrawMainMenu  app_1.o
-    0x08001250   0x08001250   0x00000046   Code   RO          522    .text.DrawMenuSelection  app_1.o
-    0x08001296   0x08001296   0x00000002   PAD
-    0x08001298   0x08001298   0x0000004a   Code   RO          530    .text.DrawPauseScreen  app_1.o
-    0x080012e2   0x080012e2   0x00000002   PAD
-    0x080012e4   0x080012e4   0x00000038   Code   RO          611    .text.DrawSnakeBody  snake_render_1.o
-    0x0800131c   0x0800131c   0x00000038   Code   RO          609    .text.DrawSnakeHead  snake_render_1.o
-    0x08001354   0x08001354   0x00000038   Code   RO          599    .text.DrawWall      snake_render_1.o
-    0x0800138c   0x0800138c   0x00000084   Code   RO           36    .text.EXTI0_IRQHandler  gpio.o
-    0x08001410   0x08001410   0x00000084   Code   RO           50    .text.EXTI15_10_IRQHandler  gpio.o
-    0x08001494   0x08001494   0x00000084   Code   RO           40    .text.EXTI1_IRQHandler  gpio.o
-    0x08001518   0x08001518   0x00000084   Code   RO           42    .text.EXTI2_IRQHandler  gpio.o
-    0x0800159c   0x0800159c   0x00000084   Code   RO           44    .text.EXTI3_IRQHandler  gpio.o
-    0x08001620   0x08001620   0x00000084   Code   RO           46    .text.EXTI4_IRQHandler  gpio.o
-    0x080016a4   0x080016a4   0x00000084   Code   RO           48    .text.EXTI9_5_IRQHandler  gpio.o
-    0x08001728   0x08001728   0x0000014c   Code   RO          613    .text.FB_Flush      snake_render_1.o
-    0x08001874   0x08001874   0x00000068   Code   RO          615    .text.FB_Write      snake_render_1.o
-    0x080018dc   0x080018dc   0x0000006e   Code   RO          644    .text.Gesture_Calibrate  gesture_1.o
-    0x0800194a   0x0800194a   0x00000002   PAD
-    0x0800194c   0x0800194c   0x0000008c   Code   RO          642    .text.Gesture_ComputePitch  gesture_1.o
-    0x080019d8   0x080019d8   0x00000038   Code   RO          640    .text.Gesture_ComputeRoll  gesture_1.o
-    0x08001a10   0x08001a10   0x00000036   Code   RO          638    .text.Gesture_Init  gesture_1.o
-    0x08001a46   0x08001a46   0x00000002   PAD
-    0x08001a48   0x08001a48   0x00000224   Code   RO          646    .text.Gesture_Update  gesture_1.o
-    0x08001c6c   0x08001c6c   0x000000ce   Code   RO          843    .text.I2C1_Init     Demo_mini_Project.lib(i2c1_bus.o)
-    0x08001d3a   0x08001d3a   0x00000002   PAD
-    0x08001d3c   0x08001d3c   0x00000150   Code   RO          845    .text.I2C1_ReadRegister  Demo_mini_Project.lib(i2c1_bus.o)
-    0x08001e8c   0x08001e8c   0x000000ee   Code   RO          849    .text.I2C1_WriteControlData  Demo_mini_Project.lib(i2c1_bus.o)
-    0x08001f7a   0x08001f7a   0x00000002   PAD
-    0x08001f7c   0x08001f7c   0x000000ee   Code   RO          847    .text.I2C1_WriteRegister  Demo_mini_Project.lib(i2c1_bus.o)
-    0x0800206a   0x0800206a   0x00000002   PAD
-    0x0800206c   0x0800206c   0x00000094   Code   RO          582    .text.IsCellOccupiedByItem  snake_game_1.o
-    0x08002100   0x08002100   0x00000072   Code   RO          580    .text.IsCellOccupiedBySnake  snake_game_1.o
-    0x08002172   0x08002172   0x00000002   PAD
-    0x08002174   0x08002174   0x00000082   Code   RO          538    .text.LCD_PrintTemp  app_1.o
-    0x080021f6   0x080021f6   0x00000002   PAD
-    0x080021f8   0x080021f8   0x0000000e   Code   RO          858    .text.MPU6500_Init  Demo_mini_Project.lib(mpu6500.o)
-    0x08002206   0x08002206   0x00000002   PAD
-    0x08002208   0x08002208   0x0000003e   Code   RO          862    .text.MPU6500_Read16  Demo_mini_Project.lib(mpu6500.o)
-    0x08002246   0x08002246   0x00000002   PAD
-    0x08002248   0x08002248   0x0000002c   Code   RO          864    .text.MPU6500_ReadAccelRaw  Demo_mini_Project.lib(mpu6500.o)
-    0x08002274   0x08002274   0x0000002c   Code   RO          866    .text.MPU6500_ReadGyroRaw  Demo_mini_Project.lib(mpu6500.o)
-    0x080022a0   0x080022a0   0x0000000c   Code   RO          860    .text.MPU6500_ReadWhoAmI  Demo_mini_Project.lib(mpu6500.o)
-    0x080022ac   0x080022ac   0x0000005a   Code   RO          885    .text.OLED_Clear    Demo_mini_Project.lib(oled.o)
-    0x08002306   0x08002306   0x00000002   PAD
-    0x08002308   0x08002308   0x00000018   Code   RO          875    .text.OLED_Command  Demo_mini_Project.lib(oled.o)
-    0x08002320   0x08002320   0x00000018   Code   RO          877    .text.OLED_Data     Demo_mini_Project.lib(oled.o)
-    0x08002338   0x08002338   0x000000ba   Code   RO          879    .text.OLED_Init     Demo_mini_Project.lib(oled.o)
-    0x080023f2   0x080023f2   0x00000002   PAD
-    0x080023f4   0x080023f4   0x00000032   Code   RO          883    .text.OLED_PrintChar  Demo_mini_Project.lib(oled.o)
-    0x08002426   0x08002426   0x00000002   PAD
-    0x08002428   0x08002428   0x00000066   Code   RO          887    .text.OLED_PrintCharASCII  Demo_mini_Project.lib(oled.o)
-    0x0800248e   0x0800248e   0x00000002   PAD
-    0x08002490   0x08002490   0x00000024   Code   RO          889    .text.OLED_PrintString  Demo_mini_Project.lib(oled.o)
-    0x080024b4   0x080024b4   0x00000034   Code   RO          881    .text.OLED_SetCursor  Demo_mini_Project.lib(oled.o)
-    0x080024e8   0x080024e8   0x00000032   Code   RO          665    .text.OneWire_Init  my_ds18s20.o
+    0x0800107c   0x0800107c   0x00000058   Code   RO          663    .text.DS18S20_Tick_1ms  my_ds18s20.o
+    0x080010d4   0x080010d4   0x00000022   Code   RO          916    .text.DWT_Delay_Init  Demo_mini_Project.lib(timer_delay.o)
+    0x080010f6   0x080010f6   0x00000002   PAD
+    0x080010f8   0x080010f8   0x0000005e   Code   RO          524    .text.DrawCalibrateScreen  app_1.o
+    0x08001156   0x08001156   0x00000002   PAD
+    0x08001158   0x08001158   0x00000038   Code   RO          605    .text.DrawDanger    snake_render_1.o
+    0x08001190   0x08001190   0x00000038   Code   RO          607    .text.DrawEnd       snake_render_1.o
+    0x080011c8   0x080011c8   0x00000038   Code   RO          603    .text.DrawFood      snake_render_1.o
+    0x08001200   0x08001200   0x0000009c   Code   RO          536    .text.DrawGameOverScreen  app_1.o
+    0x0800129c   0x0800129c   0x00000090   Code   RO          518    .text.DrawMainMenu  app_1.o
+    0x0800132c   0x0800132c   0x00000046   Code   RO          522    .text.DrawMenuSelection  app_1.o
+    0x08001372   0x08001372   0x00000002   PAD
+    0x08001374   0x08001374   0x0000004a   Code   RO          532    .text.DrawPauseScreen  app_1.o
+    0x080013be   0x080013be   0x00000002   PAD
+    0x080013c0   0x080013c0   0x00000038   Code   RO          611    .text.DrawSnakeBody  snake_render_1.o
+    0x080013f8   0x080013f8   0x00000038   Code   RO          609    .text.DrawSnakeHead  snake_render_1.o
+    0x08001430   0x08001430   0x00000038   Code   RO          599    .text.DrawWall      snake_render_1.o
+    0x08001468   0x08001468   0x00000084   Code   RO           36    .text.EXTI0_IRQHandler  gpio.o
+    0x080014ec   0x080014ec   0x00000084   Code   RO           50    .text.EXTI15_10_IRQHandler  gpio.o
+    0x08001570   0x08001570   0x00000084   Code   RO           40    .text.EXTI1_IRQHandler  gpio.o
+    0x080015f4   0x080015f4   0x00000084   Code   RO           42    .text.EXTI2_IRQHandler  gpio.o
+    0x08001678   0x08001678   0x00000084   Code   RO           44    .text.EXTI3_IRQHandler  gpio.o
+    0x080016fc   0x080016fc   0x00000084   Code   RO           46    .text.EXTI4_IRQHandler  gpio.o
+    0x08001780   0x08001780   0x00000084   Code   RO           48    .text.EXTI9_5_IRQHandler  gpio.o
+    0x08001804   0x08001804   0x0000014c   Code   RO          613    .text.FB_Flush      snake_render_1.o
+    0x08001950   0x08001950   0x00000068   Code   RO          615    .text.FB_Write      snake_render_1.o
+    0x080019b8   0x080019b8   0x00000072   Code   RO          644    .text.Gesture_Calibrate  gesture_1.o
+    0x08001a2a   0x08001a2a   0x00000002   PAD
+    0x08001a2c   0x08001a2c   0x0000008c   Code   RO          642    .text.Gesture_ComputePitch  gesture_1.o
+    0x08001ab8   0x08001ab8   0x00000038   Code   RO          640    .text.Gesture_ComputeRoll  gesture_1.o
+    0x08001af0   0x08001af0   0x0000003c   Code   RO          638    .text.Gesture_Init  gesture_1.o
+    0x08001b2c   0x08001b2c   0x00000268   Code   RO          646    .text.Gesture_Update  gesture_1.o
+    0x08001d94   0x08001d94   0x000000ce   Code   RO          843    .text.I2C1_Init     Demo_mini_Project.lib(i2c1_bus.o)
+    0x08001e62   0x08001e62   0x00000002   PAD
+    0x08001e64   0x08001e64   0x00000150   Code   RO          845    .text.I2C1_ReadRegister  Demo_mini_Project.lib(i2c1_bus.o)
+    0x08001fb4   0x08001fb4   0x000000ee   Code   RO          849    .text.I2C1_WriteControlData  Demo_mini_Project.lib(i2c1_bus.o)
+    0x080020a2   0x080020a2   0x00000002   PAD
+    0x080020a4   0x080020a4   0x000000ee   Code   RO          847    .text.I2C1_WriteRegister  Demo_mini_Project.lib(i2c1_bus.o)
+    0x08002192   0x08002192   0x00000002   PAD
+    0x08002194   0x08002194   0x00000094   Code   RO          582    .text.IsCellOccupiedByItem  snake_game_1.o
+    0x08002228   0x08002228   0x00000072   Code   RO          580    .text.IsCellOccupiedBySnake  snake_game_1.o
+    0x0800229a   0x0800229a   0x00000002   PAD
+    0x0800229c   0x0800229c   0x00000082   Code   RO          538    .text.LCD_PrintTemp  app_1.o
+    0x0800231e   0x0800231e   0x00000002   PAD
+    0x08002320   0x08002320   0x0000000e   Code   RO          858    .text.MPU6500_Init  Demo_mini_Project.lib(mpu6500.o)
+    0x0800232e   0x0800232e   0x00000002   PAD
+    0x08002330   0x08002330   0x0000003e   Code   RO          862    .text.MPU6500_Read16  Demo_mini_Project.lib(mpu6500.o)
+    0x0800236e   0x0800236e   0x00000002   PAD
+    0x08002370   0x08002370   0x0000002c   Code   RO          864    .text.MPU6500_ReadAccelRaw  Demo_mini_Project.lib(mpu6500.o)
+    0x0800239c   0x0800239c   0x0000002c   Code   RO          866    .text.MPU6500_ReadGyroRaw  Demo_mini_Project.lib(mpu6500.o)
+    0x080023c8   0x080023c8   0x0000000c   Code   RO          860    .text.MPU6500_ReadWhoAmI  Demo_mini_Project.lib(mpu6500.o)
+    0x080023d4   0x080023d4   0x0000005a   Code   RO          885    .text.OLED_Clear    Demo_mini_Project.lib(oled.o)
+    0x0800242e   0x0800242e   0x00000002   PAD
+    0x08002430   0x08002430   0x00000018   Code   RO          875    .text.OLED_Command  Demo_mini_Project.lib(oled.o)
+    0x08002448   0x08002448   0x00000018   Code   RO          877    .text.OLED_Data     Demo_mini_Project.lib(oled.o)
+    0x08002460   0x08002460   0x000000ba   Code   RO          879    .text.OLED_Init     Demo_mini_Project.lib(oled.o)
     0x0800251a   0x0800251a   0x00000002   PAD
-    0x0800251c   0x0800251c   0x000000a8   Code   RO          560    .text.PlaceObstacles  snake_game_1.o
-    0x080025c4   0x080025c4   0x00000072   Code   RO          532    .text.ProcessPlayingButtons  app_1.o
-    0x08002636   0x08002636   0x00000002   PAD
-    0x08002638   0x08002638   0x00000042   Code   RO          534    .text.ProcessPlayingTilt  app_1.o
-    0x0800267a   0x0800267a   0x00000002   PAD
-    0x0800267c   0x0800267c   0x000000d2   Code   RO          520    .text.ReadButtonPresses  app_1.o
-    0x0800274e   0x0800274e   0x00000002   PAD
-    0x08002750   0x08002750   0x0000006a   Code   RO          528    .text.ReadButtonsHeld  app_1.o
-    0x080027ba   0x080027ba   0x00000002   PAD
-    0x080027bc   0x080027bc   0x0000002e   Code   RO          526    .text.ReadMPU       app_1.o
-    0x080027ea   0x080027ea   0x00000002   PAD
-    0x080027ec   0x080027ec   0x00000038   Code   RO          514    .text.ReadTemperature  app_1.o
-    0x08002824   0x08002824   0x0000003e   Code   RO          584    .text.SnakeGame_GetSpeedMs  snake_game_1.o
-    0x08002862   0x08002862   0x00000002   PAD
-    0x08002864   0x08002864   0x000000b8   Code   RO          558    .text.SnakeGame_Init  snake_game_1.o
-    0x0800291c   0x0800291c   0x00000090   Code   RO          572    .text.SnakeGame_IsObstacle  snake_game_1.o
-    0x080029ac   0x080029ac   0x0000004a   Code   RO          570    .text.SnakeGame_IsPlayable  snake_game_1.o
-    0x080029f6   0x080029f6   0x00000002   PAD
-    0x080029f8   0x080029f8   0x00000156   Code   RO          564    .text.SnakeGame_PlaceDanger  snake_game_1.o
-    0x08002b4e   0x08002b4e   0x00000002   PAD
-    0x08002b50   0x08002b50   0x00000156   Code   RO          566    .text.SnakeGame_PlaceEnd  snake_game_1.o
-    0x08002ca6   0x08002ca6   0x00000002   PAD
-    0x08002ca8   0x08002ca8   0x000001b2   Code   RO          562    .text.SnakeGame_PlaceFood  snake_game_1.o
-    0x08002e5a   0x08002e5a   0x00000002   PAD
-    0x08002e5c   0x08002e5c   0x00000074   Code   RO          568    .text.SnakeGame_SetDirection  snake_game_1.o
-    0x08002ed0   0x08002ed0   0x00000284   Code   RO          574    .text.SnakeGame_Update  snake_game_1.o
-    0x08003154   0x08003154   0x00000040   Code   RO          576    .text.SnakeGame_UpdateLevel  snake_game_1.o
-    0x08003194   0x08003194   0x000000ee   Code   RO          601    .text.SnakeRender_Draw  snake_render_1.o
-    0x08003282   0x08003282   0x00000002   PAD
-    0x08003284   0x08003284   0x00000070   Code   RO          597    .text.SnakeRender_DrawBorder  snake_render_1.o
-    0x080032f4   0x080032f4   0x00000028   Code   RO          593    .text.SnakeRender_Init  snake_render_1.o
-    0x0800331c   0x0800331c   0x00000014   Code   RO          595    .text.SnakeRender_Reset  snake_render_1.o
-    0x08003330   0x08003330   0x00000010   Code   RO          447    .text.SysTick_Handler  timer.o
-    0x08003340   0x08003340   0x0000012e   Code   RO          776    .text.SystemCoreClockUpdate  system_stm32f4xx.o
-    0x0800346e   0x0800346e   0x00000002   PAD
-    0x08003470   0x08003470   0x00000020   Code   RO          774    .text.SystemInit    system_stm32f4xx.o
-    0x08003490   0x08003490   0x00000034   Code   RO          910    .text.TIM2_IRQHandler  Demo_mini_Project.lib(timer_delay.o)
-    0x080034c4   0x080034c4   0x00000078   Code   RO          904    .text.TIM2_Init_1ms  Demo_mini_Project.lib(timer_delay.o)
-    0x0800353c   0x0800353c   0x00000036   Code   RO          476    .text.USART2_IRQHandler  uart.o
-    0x08003572   0x08003572   0x00000002   PAD
-    0x08003574   0x08003574   0x00000042   Code   RO          416    .text.USART_GetFlagStatus  stm32f4xx_usart.o
-    0x080035b6   0x080035b6   0x00000002   PAD
-    0x080035b8   0x080035b8   0x00000010   Code   RO          386    .text.USART_ReceiveData  stm32f4xx_usart.o
-    0x080035c8   0x080035c8   0x000001ae   Code   RO          516    .text.UpdateLCD     app_1.o
-    0x08003776   0x08003776   0x00000002   PAD
-    0x08003778   0x08003778   0x00000030   Code   RO           38    .text.__NVIC_ClearPendingIRQ  gpio.o
-    0x080037a8   0x080037a8   0x00000030   Code   RO          470    .text.__NVIC_ClearPendingIRQ  uart.o
-    0x080037d8   0x080037d8   0x00000030   Code   RO          908    .text.__NVIC_EnableIRQ  Demo_mini_Project.lib(timer_delay.o)
-    0x08003808   0x08003808   0x00000042   Code   RO          906    .text.__NVIC_SetPriority  Demo_mini_Project.lib(timer_delay.o)
-    0x0800384a   0x0800384a   0x00000002   PAD
-    0x0800384c   0x0800384c   0x00000030   Code   RO          914    .text.delayMs       Demo_mini_Project.lib(timer_delay.o)
-    0x0800387c   0x0800387c   0x0000000c   Code   RO          930    .text.delay_cycles  LCDFunctions.lib(delay.o)
-    0x08003888   0x08003888   0x00000056   Code   RO          928    .text.delay_ms      LCDFunctions.lib(delay.o)
-    0x080038de   0x080038de   0x00000002   PAD
-    0x080038e0   0x080038e0   0x0000005a   Code   RO          932    .text.delay_us      LCDFunctions.lib(delay.o)
-    0x0800393a   0x0800393a   0x00000002   PAD
-    0x0800393c   0x0800393c   0x00000036   Code   RO           14    .text.gpio_set      gpio.o
+    0x0800251c   0x0800251c   0x00000032   Code   RO          883    .text.OLED_PrintChar  Demo_mini_Project.lib(oled.o)
+    0x0800254e   0x0800254e   0x00000002   PAD
+    0x08002550   0x08002550   0x00000066   Code   RO          887    .text.OLED_PrintCharASCII  Demo_mini_Project.lib(oled.o)
+    0x080025b6   0x080025b6   0x00000002   PAD
+    0x080025b8   0x080025b8   0x00000024   Code   RO          889    .text.OLED_PrintString  Demo_mini_Project.lib(oled.o)
+    0x080025dc   0x080025dc   0x00000034   Code   RO          881    .text.OLED_SetCursor  Demo_mini_Project.lib(oled.o)
+    0x08002610   0x08002610   0x00000032   Code   RO          665    .text.OneWire_Init  my_ds18s20.o
+    0x08002642   0x08002642   0x00000002   PAD
+    0x08002644   0x08002644   0x000000a8   Code   RO          560    .text.PlaceObstacles  snake_game_1.o
+    0x080026ec   0x080026ec   0x00000072   Code   RO          534    .text.ProcessPlayingButtons  app_1.o
+    0x0800275e   0x0800275e   0x00000002   PAD
+    0x08002760   0x08002760   0x00000042   Code   RO          528    .text.ProcessPlayingTilt  app_1.o
+    0x080027a2   0x080027a2   0x00000002   PAD
+    0x080027a4   0x080027a4   0x000000d2   Code   RO          520    .text.ReadButtonPresses  app_1.o
+    0x08002876   0x08002876   0x00000002   PAD
+    0x08002878   0x08002878   0x0000006a   Code   RO          530    .text.ReadButtonsHeld  app_1.o
+    0x080028e2   0x080028e2   0x00000002   PAD
+    0x080028e4   0x080028e4   0x0000002e   Code   RO          526    .text.ReadMPU       app_1.o
+    0x08002912   0x08002912   0x00000002   PAD
+    0x08002914   0x08002914   0x00000038   Code   RO          514    .text.ReadTemperature  app_1.o
+    0x0800294c   0x0800294c   0x0000003e   Code   RO          584    .text.SnakeGame_GetSpeedMs  snake_game_1.o
+    0x0800298a   0x0800298a   0x00000002   PAD
+    0x0800298c   0x0800298c   0x000000b8   Code   RO          558    .text.SnakeGame_Init  snake_game_1.o
+    0x08002a44   0x08002a44   0x00000090   Code   RO          572    .text.SnakeGame_IsObstacle  snake_game_1.o
+    0x08002ad4   0x08002ad4   0x0000004a   Code   RO          570    .text.SnakeGame_IsPlayable  snake_game_1.o
+    0x08002b1e   0x08002b1e   0x00000002   PAD
+    0x08002b20   0x08002b20   0x00000156   Code   RO          564    .text.SnakeGame_PlaceDanger  snake_game_1.o
+    0x08002c76   0x08002c76   0x00000002   PAD
+    0x08002c78   0x08002c78   0x00000156   Code   RO          566    .text.SnakeGame_PlaceEnd  snake_game_1.o
+    0x08002dce   0x08002dce   0x00000002   PAD
+    0x08002dd0   0x08002dd0   0x000001b2   Code   RO          562    .text.SnakeGame_PlaceFood  snake_game_1.o
+    0x08002f82   0x08002f82   0x00000002   PAD
+    0x08002f84   0x08002f84   0x00000074   Code   RO          568    .text.SnakeGame_SetDirection  snake_game_1.o
+    0x08002ff8   0x08002ff8   0x00000284   Code   RO          574    .text.SnakeGame_Update  snake_game_1.o
+    0x0800327c   0x0800327c   0x00000040   Code   RO          576    .text.SnakeGame_UpdateLevel  snake_game_1.o
+    0x080032bc   0x080032bc   0x000000ee   Code   RO          601    .text.SnakeRender_Draw  snake_render_1.o
+    0x080033aa   0x080033aa   0x00000002   PAD
+    0x080033ac   0x080033ac   0x00000070   Code   RO          597    .text.SnakeRender_DrawBorder  snake_render_1.o
+    0x0800341c   0x0800341c   0x00000028   Code   RO          593    .text.SnakeRender_Init  snake_render_1.o
+    0x08003444   0x08003444   0x00000014   Code   RO          595    .text.SnakeRender_Reset  snake_render_1.o
+    0x08003458   0x08003458   0x00000010   Code   RO          447    .text.SysTick_Handler  timer.o
+    0x08003468   0x08003468   0x0000012e   Code   RO          776    .text.SystemCoreClockUpdate  system_stm32f4xx.o
+    0x08003596   0x08003596   0x00000002   PAD
+    0x08003598   0x08003598   0x00000020   Code   RO          774    .text.SystemInit    system_stm32f4xx.o
+    0x080035b8   0x080035b8   0x00000034   Code   RO          910    .text.TIM2_IRQHandler  Demo_mini_Project.lib(timer_delay.o)
+    0x080035ec   0x080035ec   0x00000078   Code   RO          904    .text.TIM2_Init_1ms  Demo_mini_Project.lib(timer_delay.o)
+    0x08003664   0x08003664   0x00000036   Code   RO          476    .text.USART2_IRQHandler  uart.o
+    0x0800369a   0x0800369a   0x00000002   PAD
+    0x0800369c   0x0800369c   0x00000042   Code   RO          416    .text.USART_GetFlagStatus  stm32f4xx_usart.o
+    0x080036de   0x080036de   0x00000002   PAD
+    0x080036e0   0x080036e0   0x00000010   Code   RO          386    .text.USART_ReceiveData  stm32f4xx_usart.o
+    0x080036f0   0x080036f0   0x000001ae   Code   RO          516    .text.UpdateLCD     app_1.o
+    0x0800389e   0x0800389e   0x00000002   PAD
+    0x080038a0   0x080038a0   0x00000030   Code   RO           38    .text.__NVIC_ClearPendingIRQ  gpio.o
+    0x080038d0   0x080038d0   0x00000030   Code   RO          470    .text.__NVIC_ClearPendingIRQ  uart.o
+    0x08003900   0x08003900   0x00000030   Code   RO          908    .text.__NVIC_EnableIRQ  Demo_mini_Project.lib(timer_delay.o)
+    0x08003930   0x08003930   0x00000042   Code   RO          906    .text.__NVIC_SetPriority  Demo_mini_Project.lib(timer_delay.o)
     0x08003972   0x08003972   0x00000002   PAD
-    0x08003974   0x08003974   0x00000142   Code   RO           22    .text.gpio_set_mode  gpio.o
-    0x08003ab6   0x08003ab6   0x00000002   PAD
-    0x08003ab8   0x08003ab8   0x000000e4   Code   RO          486    .text.intToStr      utils_1.o
-    0x08003b9c   0x08003b9c   0x000000be   Code   RO          788    .text.lcd_init      LCDFunctions.lib(lcd.o)
-    0x08003c5a   0x08003c5a   0x00000002   PAD
-    0x08003c5c   0x08003c5c   0x00000048   Code   RO          802    .text.lcd_print     LCDFunctions.lib(lcd.o)
-    0x08003ca4   0x08003ca4   0x00000096   Code   RO          800    .text.lcd_put_char  LCDFunctions.lib(lcd.o)
-    0x08003d3a   0x08003d3a   0x00000002   PAD
-    0x08003d3c   0x08003d3c   0x0000001e   Code   RO          792    .text.lcd_set_cursor  LCDFunctions.lib(lcd.o)
-    0x08003d5a   0x08003d5a   0x00000002   PAD
-    0x08003d5c   0x08003d5c   0x00000092   Code   RO          790    .text.lcd_write_cmd  LCDFunctions.lib(lcd.o)
-    0x08003dee   0x08003dee   0x00000002   PAD
-    0x08003df0   0x08003df0   0x00000066   Code   RO            2    .text.main          demo_main.o
-    0x08003e56   0x08003e56   0x00000002   PAD
-    0x08003e58   0x08003e58   0x0000008a   Code   RO          679    .text.ow_delay_us   my_ds18s20.o
-    0x08003ee2   0x08003ee2   0x00000002   PAD
-    0x08003ee4   0x08003ee4   0x0000001e   Code   RO          689    .text.ow_pin_input  my_ds18s20.o
-    0x08003f02   0x08003f02   0x00000002   PAD
-    0x08003f04   0x08003f04   0x00000032   Code   RO          687    .text.ow_pin_output_low  my_ds18s20.o
-    0x08003f36   0x08003f36   0x00000002   PAD
-    0x08003f38   0x08003f38   0x00000036   Code   RO          693    .text.ow_read_bit   my_ds18s20.o
-    0x08003f6e   0x08003f6e   0x00000002   PAD
-    0x08003f70   0x08003f70   0x00000050   Code   RO          675    .text.ow_read_byte  my_ds18s20.o
-    0x08003fc0   0x08003fc0   0x0000003c   Code   RO          669    .text.ow_reset      my_ds18s20.o
-    0x08003ffc   0x08003ffc   0x00000040   Code   RO          691    .text.ow_write_bit  my_ds18s20.o
-    0x0800403c   0x0800403c   0x00000042   Code   RO          671    .text.ow_write_byte  my_ds18s20.o
-    0x0800407e   0x0800407e   0x00000002   PAD
-    0x08004080   0x08004080   0x00000026   Code   RO          578    .text.simple_random  snake_game_1.o
-    0x080040a6   0x080040a6   0x00000002   PAD
-    0x080040a8   0x080040a8   0x00000032   Code   RO          474    .text.uart_rx       uart.o
-    0x080040da   0x080040da   0x00000026   Code   RO          989    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
-    0x08004100   0x08004100   0x000002ac   Code   RO          967    i.__hardfp_atan2f   m_wm.l(atan2f.o)
-    0x080043ac   0x080043ac   0x0000003a   Code   RO          973    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
-    0x080043e6   0x080043e6   0x00000006   Code   RO          993    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
-    0x080043ec   0x080043ec   0x00000010   Code   RO          997    i.__mathlib_flt_underflow  m_wm.l(funder.o)
-    0x080043fc   0x080043fc   0x0000001a   Code   RO         1096    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08004416   0x08004416   0x00000000   Code   RO          988    x$fpl$usenofp       fz_wm.l(usenofp.o)
-    0x08004416   0x08004416   0x00000010   Data   RO          779    .rodata.AHBPrescTable  system_stm32f4xx.o
-    0x08004426   0x08004426   0x00000002   PAD
-    0x08004428   0x08004428   0x00000018   Data   RO          757    .rodata.EventRecorderInfo  eventrecorder.o
-    0x08004440   0x08004440   0x000001db   Data   RO          831    .rodata.Font5x7     Demo_mini_Project.lib(foun5x7.o)
-    0x0800461b   0x0800461b   0x00000004   Data   RO          624    .rodata.P_DANGER_EVEN  snake_render_1.o
-    0x0800461f   0x0800461f   0x00000004   Data   RO          623    .rodata.P_DANGER_ODD  snake_render_1.o
-    0x08004623   0x08004623   0x00000004   Data   RO          626    .rodata.P_END_EVEN  snake_render_1.o
-    0x08004627   0x08004627   0x00000004   Data   RO          625    .rodata.P_END_ODD   snake_render_1.o
-    0x0800462b   0x0800462b   0x00000004   Data   RO          622    .rodata.P_FOOD_EVEN  snake_render_1.o
-    0x0800462f   0x0800462f   0x00000004   Data   RO          621    .rodata.P_FOOD_ODD  snake_render_1.o
-    0x08004633   0x08004633   0x00000004   Data   RO          628    .rodata.P_HEAD_EVEN  snake_render_1.o
-    0x08004637   0x08004637   0x00000004   Data   RO          627    .rodata.P_HEAD_ODD  snake_render_1.o
-    0x0800463b   0x0800463b   0x00000004   Data   RO          630    .rodata.P_SNAKE_EVEN  snake_render_1.o
-    0x0800463f   0x0800463f   0x00000004   Data   RO          629    .rodata.P_SNAKE_ODD  snake_render_1.o
-    0x08004643   0x08004643   0x00000004   Data   RO          620    .rodata.P_WALL_EVEN  snake_render_1.o
-    0x08004647   0x08004647   0x00000004   Data   RO          619    .rodata.P_WALL_ODD  snake_render_1.o
-    0x0800464b   0x0800464b   0x00000005   Data   RO          837    .rodata.font_degree  Demo_mini_Project.lib(foun5x7.o)
-    0x08004650   0x08004650   0x000001bb   Data   RO          545    .rodata.str1.1      app_1.o
-    0x0800480b   0x0800480b   0x00000001   PAD
-    0x0800480c   0x0800480c   0x00000020   Data   RO         1171    Region$$Table       anon$$obj.o
+    0x08003974   0x08003974   0x00000030   Code   RO          914    .text.delayMs       Demo_mini_Project.lib(timer_delay.o)
+    0x080039a4   0x080039a4   0x0000000c   Code   RO          930    .text.delay_cycles  LCDFunctions.lib(delay.o)
+    0x080039b0   0x080039b0   0x00000056   Code   RO          928    .text.delay_ms      LCDFunctions.lib(delay.o)
+    0x08003a06   0x08003a06   0x00000002   PAD
+    0x08003a08   0x08003a08   0x0000005a   Code   RO          932    .text.delay_us      LCDFunctions.lib(delay.o)
+    0x08003a62   0x08003a62   0x00000002   PAD
+    0x08003a64   0x08003a64   0x00000036   Code   RO           14    .text.gpio_set      gpio.o
+    0x08003a9a   0x08003a9a   0x00000002   PAD
+    0x08003a9c   0x08003a9c   0x00000142   Code   RO           22    .text.gpio_set_mode  gpio.o
+    0x08003bde   0x08003bde   0x00000002   PAD
+    0x08003be0   0x08003be0   0x000000e4   Code   RO          486    .text.intToStr      utils_1.o
+    0x08003cc4   0x08003cc4   0x000000be   Code   RO          788    .text.lcd_init      LCDFunctions.lib(lcd.o)
+    0x08003d82   0x08003d82   0x00000002   PAD
+    0x08003d84   0x08003d84   0x00000048   Code   RO          802    .text.lcd_print     LCDFunctions.lib(lcd.o)
+    0x08003dcc   0x08003dcc   0x00000096   Code   RO          800    .text.lcd_put_char  LCDFunctions.lib(lcd.o)
+    0x08003e62   0x08003e62   0x00000002   PAD
+    0x08003e64   0x08003e64   0x0000001e   Code   RO          792    .text.lcd_set_cursor  LCDFunctions.lib(lcd.o)
+    0x08003e82   0x08003e82   0x00000002   PAD
+    0x08003e84   0x08003e84   0x00000092   Code   RO          790    .text.lcd_write_cmd  LCDFunctions.lib(lcd.o)
+    0x08003f16   0x08003f16   0x00000002   PAD
+    0x08003f18   0x08003f18   0x00000066   Code   RO            2    .text.main          demo_main.o
+    0x08003f7e   0x08003f7e   0x00000002   PAD
+    0x08003f80   0x08003f80   0x0000008a   Code   RO          679    .text.ow_delay_us   my_ds18s20.o
+    0x0800400a   0x0800400a   0x00000002   PAD
+    0x0800400c   0x0800400c   0x0000001e   Code   RO          689    .text.ow_pin_input  my_ds18s20.o
+    0x0800402a   0x0800402a   0x00000002   PAD
+    0x0800402c   0x0800402c   0x00000032   Code   RO          687    .text.ow_pin_output_low  my_ds18s20.o
+    0x0800405e   0x0800405e   0x00000002   PAD
+    0x08004060   0x08004060   0x00000036   Code   RO          693    .text.ow_read_bit   my_ds18s20.o
+    0x08004096   0x08004096   0x00000002   PAD
+    0x08004098   0x08004098   0x00000050   Code   RO          675    .text.ow_read_byte  my_ds18s20.o
+    0x080040e8   0x080040e8   0x0000003c   Code   RO          669    .text.ow_reset      my_ds18s20.o
+    0x08004124   0x08004124   0x00000040   Code   RO          691    .text.ow_write_bit  my_ds18s20.o
+    0x08004164   0x08004164   0x00000042   Code   RO          671    .text.ow_write_byte  my_ds18s20.o
+    0x080041a6   0x080041a6   0x00000002   PAD
+    0x080041a8   0x080041a8   0x00000026   Code   RO          578    .text.simple_random  snake_game_1.o
+    0x080041ce   0x080041ce   0x00000002   PAD
+    0x080041d0   0x080041d0   0x00000032   Code   RO          474    .text.uart_rx       uart.o
+    0x08004202   0x08004202   0x00000026   Code   RO          989    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
+    0x08004228   0x08004228   0x000002ac   Code   RO          967    i.__hardfp_atan2f   m_wm.l(atan2f.o)
+    0x080044d4   0x080044d4   0x0000003a   Code   RO          973    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
+    0x0800450e   0x0800450e   0x00000006   Code   RO          993    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
+    0x08004514   0x08004514   0x00000010   Code   RO          997    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x08004524   0x08004524   0x0000001a   Code   RO         1096    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x0800453e   0x0800453e   0x00000000   Code   RO          988    x$fpl$usenofp       fz_wm.l(usenofp.o)
+    0x0800453e   0x0800453e   0x00000010   Data   RO          779    .rodata.AHBPrescTable  system_stm32f4xx.o
+    0x0800454e   0x0800454e   0x00000002   PAD
+    0x08004550   0x08004550   0x00000018   Data   RO          757    .rodata.EventRecorderInfo  eventrecorder.o
+    0x08004568   0x08004568   0x000001db   Data   RO          831    .rodata.Font5x7     Demo_mini_Project.lib(foun5x7.o)
+    0x08004743   0x08004743   0x00000004   Data   RO          624    .rodata.P_DANGER_EVEN  snake_render_1.o
+    0x08004747   0x08004747   0x00000004   Data   RO          623    .rodata.P_DANGER_ODD  snake_render_1.o
+    0x0800474b   0x0800474b   0x00000004   Data   RO          626    .rodata.P_END_EVEN  snake_render_1.o
+    0x0800474f   0x0800474f   0x00000004   Data   RO          625    .rodata.P_END_ODD   snake_render_1.o
+    0x08004753   0x08004753   0x00000004   Data   RO          622    .rodata.P_FOOD_EVEN  snake_render_1.o
+    0x08004757   0x08004757   0x00000004   Data   RO          621    .rodata.P_FOOD_ODD  snake_render_1.o
+    0x0800475b   0x0800475b   0x00000004   Data   RO          628    .rodata.P_HEAD_EVEN  snake_render_1.o
+    0x0800475f   0x0800475f   0x00000004   Data   RO          627    .rodata.P_HEAD_ODD  snake_render_1.o
+    0x08004763   0x08004763   0x00000004   Data   RO          630    .rodata.P_SNAKE_EVEN  snake_render_1.o
+    0x08004767   0x08004767   0x00000004   Data   RO          629    .rodata.P_SNAKE_ODD  snake_render_1.o
+    0x0800476b   0x0800476b   0x00000004   Data   RO          620    .rodata.P_WALL_EVEN  snake_render_1.o
+    0x0800476f   0x0800476f   0x00000004   Data   RO          619    .rodata.P_WALL_ODD  snake_render_1.o
+    0x08004773   0x08004773   0x00000005   Data   RO          837    .rodata.font_degree  Demo_mini_Project.lib(foun5x7.o)
+    0x08004778   0x08004778   0x000001e0   Data   RO          545    .rodata.str1.1      app_1.o
+    0x08004958   0x08004958   0x00000020   Data   RO         1171    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004840, Size: 0x00001528, Max: 0x00018000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004980, Size: 0x00001528, Max: 0x00018000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08004840   0x00000001   Data   RW          544    .data.App_Run.startup_stage_drawn  app_1.o
-    0x20000001   0x08004841   0x00000003   PAD
-    0x20000004   0x08004844   0x00000010   Data   RW          804    .data.P_LCD_DATA    LCDFunctions.lib(lcd.o)
-    0x20000014   0x08004854   0x00000004   Data   RW          778    .data.SystemCoreClock  system_stm32f4xx.o
-    0x20000018   0x08004858   0x0000000c   Data   RW          547    .data.member_bupt_ids  app_1.o
-    0x20000024   0x08004864   0x0000000c   Data   RW          546    .data.member_names  app_1.o
-    0x20000030   0x08004870   0x0000000c   Data   RW          548    .data.member_qm_ids  app_1.o
-    0x2000003c   0x0800487c   0x00000004   PAD
+    0x20000000   0x08004980   0x00000001   Data   RW          544    .data.App_Run.startup_stage_drawn  app_1.o
+    0x20000001   0x08004981   0x00000003   PAD
+    0x20000004   0x08004984   0x00000010   Data   RW          804    .data.P_LCD_DATA    LCDFunctions.lib(lcd.o)
+    0x20000014   0x08004994   0x00000004   Data   RW          778    .data.SystemCoreClock  system_stm32f4xx.o
+    0x20000018   0x08004998   0x0000000c   Data   RW          547    .data.member_bupt_ids  app_1.o
+    0x20000024   0x080049a4   0x0000000c   Data   RW          546    .data.member_names  app_1.o
+    0x20000030   0x080049b0   0x0000000c   Data   RW          548    .data.member_qm_ids  app_1.o
+    0x2000003c   0x080049bc   0x00000004   PAD
     0x20000040        -       0x00000060   Zero   RW         1026    .bss                c_w.l(libspace.o)
     0x200000a0        -       0x00000004   Zero   RW          549    .bss.App_Run.k4_press_start  app_1.o
     0x200000a4        -       0x00000001   Zero   RW          550    .bss.App_Run.k4_was_held  app_1.o
@@ -2596,7 +2600,7 @@ Memory Map of the image
     0x200000a6        -       0x00000001   Zero   RW          541    .bss.App_Run.prev_k2  app_1.o
     0x200000a7        -       0x00000001   Zero   RW          542    .bss.App_Run.prev_k3  app_1.o
     0x200000a8        -       0x00000001   Zero   RW          543    .bss.App_Run.prev_k4  app_1.o
-    0x200000a9   0x0800487c   0x00000003   PAD
+    0x200000a9   0x080049bc   0x00000003   PAD
     0x200000ac        -       0x00000004   Zero   RW           56    .bss.GPIO_callback  gpio.o
     0x200000b0        -       0x00000004   Zero   RW           54    .bss.IRQ_pin_index  gpio.o
     0x200000b4        -       0x00000004   Zero   RW           53    .bss.IRQ_port_num   gpio.o
@@ -2605,15 +2609,15 @@ Memory Map of the image
     0x200000c0        -       0x00000004   Zero   RW          805    .bss.char_num       LCDFunctions.lib(lcd.o)
     0x200000c4        -       0x00000001   Zero   RW          697    .bss.ds18_busy      my_ds18s20.o
     0x200000c5        -       0x00000001   Zero   RW          695    .bss.ds18_ready     my_ds18s20.o
-    0x200000c6   0x0800487c   0x00000002   PAD
+    0x200000c6   0x080049bc   0x00000002   PAD
     0x200000c8        -       0x00000004   Zero   RW          696    .bss.ds18_temp_x10  my_ds18s20.o
     0x200000cc        -       0x00000002   Zero   RW          698    .bss.ds18_timer     my_ds18s20.o
     0x200000ce        -       0x00000400   Zero   RW          617    .bss.fb             snake_render_1.o
     0x200004ce        -       0x00000400   Zero   RW          618    .bss.fb_last        snake_render_1.o
-    0x200008ce   0x0800487c   0x00000002   PAD
-    0x200008d0        -       0x0000017c   Zero   RW            4    .bss.main.app       demo_main.o
-    0x20000a4c        -       0x00000004   Zero   RW          920    .bss.msTicks        Demo_mini_Project.lib(timer_delay.o)
-    0x20000a50   0x0800487c   0x00000030   PAD
+    0x200008ce   0x080049bc   0x00000002   PAD
+    0x200008d0        -       0x00000180   Zero   RW            4    .bss.main.app       demo_main.o
+    0x20000a50        -       0x00000004   Zero   RW          920    .bss.msTicks        Demo_mini_Project.lib(timer_delay.o)
+    0x20000a54   0x080049bc   0x0000002c   PAD
     0x20000a80        -       0x000004a4   Zero   RW          756    .bss.noinit         eventrecorder.o
     0x20000f24        -       0x00000004   Zero   RW          449    .bss.timer_callback  timer.o
     0x20000f28        -       0x00000200   Zero   RW          765    HEAP                startup_stm32f401xe.o
@@ -2627,10 +2631,10 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      4364         18        443         37          9       9275   app_1.o
-       102          0          0          0        380       3449   demo_main.o
+      4584         18        480         37          9       9579   app_1.o
+       102          0          0          0        384       3469   demo_main.o
          0          0         24          0       1188       8372   eventrecorder.o
-       908         20          0          0          0       3188   gesture_1.o
+       986         12          0          0          0       3271   gesture_1.o
       1348          6          0          0         16       9820   gpio.o
        870          0          0          0          8       5206   my_ds18s20.o
       2874          4          0          0          0       5864   snake_game_1.o
@@ -2643,9 +2647,9 @@ Image component sizes
        228          0          0          0          0        804   utils_1.o
 
     ----------------------------------------------------------------------
-     12594         74        970         44       5204      71846   Object Totals
+     12890         66       1006         44       5208      72253   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        70          0          3          3         11          0   (incl. Padding)
+        68          0          2          3         11          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2691,8 +2695,8 @@ Image component sizes
         58          0          0          0          0        136   sqrtf.o
 
     ----------------------------------------------------------------------
-      4432        116        480         16        152      23940   Library Totals
-        52          0          0          0         48          0   (incl. Padding)
+      4432        116        480         16        148      23940   Library Totals
+        52          0          0          0         44          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2705,7 +2709,7 @@ Image component sizes
        802         96          0          0          0        692   m_wm.l
 
     ----------------------------------------------------------------------
-      4432        116        480         16        152      23940   Library Totals
+      4432        116        480         16        148      23940   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2714,15 +2718,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     17026        190       1450         60       5356      94730   Grand Totals
-     17026        190       1450         60       5356      94730   ELF Image Totals
-     17026        190       1450         60          0          0   ROM Totals
+     17322        182       1486         60       5356      95137   Grand Totals
+     17322        182       1486         60       5356      95137   ELF Image Totals
+     17322        182       1486         60          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                18476 (  18.04kB)
+    Total RO  Size (Code + RO Data)                18808 (  18.37kB)
     Total RW  Size (RW Data + ZI Data)              5416 (   5.29kB)
-    Total ROM Size (Code + RO Data + RW Data)      18536 (  18.10kB)
+    Total ROM Size (Code + RO Data + RW Data)      18868 (  18.43kB)
 
 ==============================================================================
 

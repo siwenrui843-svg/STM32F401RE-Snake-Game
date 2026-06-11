@@ -36,7 +36,7 @@
  * due to momentary sensor noise or hand vibration.
  * ---------------------------------------------------------------------------
  */
-#define DEBOUNCE_COUNT_NEEDED  3U
+#define DEBOUNCE_COUNT_NEEDED  2U
 
 /*
  * ---------------------------------------------------------------------------
@@ -64,6 +64,7 @@ void Gesture_Init(Gesture_t *g)
     g->calibrated          = 0;
     g->debounce_count      = 0;
     g->candidate_direction = DIR_RIGHT;
+    g->centred             = 1;
 }
 
 /*
@@ -150,6 +151,7 @@ void Gesture_Calibrate(Gesture_t *g, int16_t ax, int16_t ay, int16_t az)
     g->last_tilt_direction = DIR_RIGHT;
     g->debounce_count      = 0;
     g->candidate_direction = DIR_RIGHT;
+    g->centred             = 1;
 
     g->calibrated = 1;
 }
@@ -198,7 +200,10 @@ SnakeDirection Gesture_Update(Gesture_t *g, int16_t ax, int16_t ay, int16_t az)
     /*
      * Step 3: Apply low-pass filter for smoothing.
      *
-     * filtered = alpha * new + (1 - alpha) * previous_filtered
+     * Always update — even inside the dead zone — so the filter
+     * tracks the true angle continuously.  If we froze the filter
+     * inside the dead zone, the filtered value would lag behind the
+     * real angle when the board is tilted again.
      */
     g->filtered_roll  = TILT_FILTER_ALPHA * cal_roll
                       + (1.0f - TILT_FILTER_ALPHA) * g->filtered_roll;
@@ -207,10 +212,7 @@ SnakeDirection Gesture_Update(Gesture_t *g, int16_t ax, int16_t ay, int16_t az)
                       + (1.0f - TILT_FILTER_ALPHA) * g->filtered_pitch;
 
     /*
-     * Step 4: Determine whether the tilt exceeds the dead zone
-     *         and threshold.
-     *
-     * Use the absolute value of the filtered angles.
+     * Step 4: Determine whether the tilt exceeds the threshold.
      */
     abs_roll  = g->filtered_roll;
     abs_pitch = g->filtered_pitch;
@@ -219,17 +221,29 @@ SnakeDirection Gesture_Update(Gesture_t *g, int16_t ax, int16_t ay, int16_t az)
     if (abs_pitch < 0.0f) { abs_pitch = -abs_pitch; }
 
     /*
-     * If neither axis exceeds the threshold, no direction change.
-     * Return the last direction to maintain current movement.
+     * If neither axis exceeds the threshold, keep current direction.
      */
     if (abs_roll < TILT_THRESHOLD_DEG && abs_pitch < TILT_THRESHOLD_DEG)
     {
         /*
-         * Both axes are within the dead zone / below threshold.
-         * Keep the current direction. Reset any partial debounce.
+         * Board is near-level: mark as centred so the next tilt can
+         * trigger a new direction change.
          */
+        if (abs_roll < TILT_CENTRE_DEG && abs_pitch < TILT_CENTRE_DEG)
+        {
+            g->centred = 1;
+        }
         g->debounce_count      = 0;
         g->candidate_direction = g->last_tilt_direction;
+        return g->last_tilt_direction;
+    }
+
+    /*
+     * Board is tilted past the threshold but we have not returned to
+     * centre since the last trigger — block a new direction change.
+     */
+    if (!g->centred)
+    {
         return g->last_tilt_direction;
     }
 
@@ -241,42 +255,24 @@ SnakeDirection Gesture_Update(Gesture_t *g, int16_t ax, int16_t ay, int16_t az)
      */
     if (abs_pitch > abs_roll)
     {
-        /*
-         * Pitch is dominant — move UP or DOWN.
-         *
-         * Positive pitch (board tilted forward / away from user)
-         * → Snake moves UP.
-         *
-         * Negative pitch (board tilted backward / toward user)
-         * → Snake moves DOWN.
-         */
         if (g->filtered_pitch > TILT_THRESHOLD_DEG)
         {
-            new_dir = DIR_UP;
+            new_dir = DIR_DOWN;
         }
         else
         {
-            new_dir = DIR_DOWN;
+            new_dir = DIR_UP;
         }
     }
     else
     {
-        /*
-         * Roll is dominant — move LEFT or RIGHT.
-         *
-         * Positive roll (board tilted right)
-         * → Snake moves RIGHT.
-         *
-         * Negative roll (board tilted left)
-         * → Snake moves LEFT.
-         */
         if (g->filtered_roll > TILT_THRESHOLD_DEG)
         {
-            new_dir = DIR_RIGHT;
+            new_dir = DIR_LEFT;
         }
         else
         {
-            new_dir = DIR_LEFT;
+            new_dir = DIR_RIGHT;
         }
     }
 
@@ -292,20 +288,12 @@ SnakeDirection Gesture_Update(Gesture_t *g, int16_t ax, int16_t ay, int16_t az)
 
         if (g->debounce_count >= DEBOUNCE_COUNT_NEEDED)
         {
-            /*
-             * Direction change is confirmed.
-             *
-             * Only update if the direction is actually different
-             * from the last applied direction.
-             */
             if (new_dir != g->last_tilt_direction)
             {
                 g->last_tilt_direction = new_dir;
             }
-            /*
-             * Keep the debounce count at the threshold so that
-             * further identical readings are also accepted.
-             */
+            /* Require board to return near-level before next trigger. */
+            g->centred        = 0;
             g->debounce_count = DEBOUNCE_COUNT_NEEDED;
         }
     }
