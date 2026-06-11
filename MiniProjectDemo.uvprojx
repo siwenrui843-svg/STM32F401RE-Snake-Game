@@ -564,54 +564,39 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>buttons.c</FileName>
+              <FileName>app.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\cfiles\buttons.c</FilePath>
+              <FilePath>.\src\app.c</FilePath>
             </File>
             <File>
-              <FileName>delay.c</FileName>
+              <FileName>demo_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\cfiles\delay.c</FilePath>
+              <FilePath>.\src\demo_main.c</FilePath>
             </File>
             <File>
-              <FileName>ds18s20.c</FileName>
+              <FileName>gesture.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\cfiles\ds18s20.c</FilePath>
+              <FilePath>.\src\gesture.c</FilePath>
             </File>
             <File>
-              <FileName>foun5x7.c</FileName>
+              <FileName>snake_game.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\cfiles\foun5x7.c</FilePath>
+              <FilePath>.\src\snake_game.c</FilePath>
             </File>
             <File>
-              <FileName>i2c1_bus.c</FileName>
+              <FileName>snake_render.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\cfiles\i2c1_bus.c</FilePath>
+              <FilePath>.\src\snake_render.c</FilePath>
             </File>
             <File>
-              <FileName>mpu6500.c</FileName>
+              <FileName>ui_display.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\cfiles\mpu6500.c</FilePath>
+              <FilePath>.\src\ui_display.c</FilePath>
             </File>
             <File>
-              <FileName>OLED.c</FileName>
+              <FileName>utils.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\cfiles\OLED.c</FilePath>
-            </File>
-            <File>
-              <FileName>onewire.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\cfiles\onewire.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\cfiles\timer_delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>Kalman.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\cfiles\Kalman.c</FilePath>
+              <FilePath>.\src\utils.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -771,6 +756,11 @@
               <FileName>gesture.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\gesture.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_ds18s20.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\my_ds18s20.c</FilePath>
             </File>
           </Files>
         </Group>

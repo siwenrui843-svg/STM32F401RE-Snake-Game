@@ -28,6 +28,14 @@
 #include "stm32f401xe.h"
 
 /*
+ * Declare SystemCoreClockUpdate() — defined in system_stm32f4xx.c.
+ *
+ * This function reads the RCC clock-configuration registers and writes
+ * the correct HCLK frequency to the global SystemCoreClock variable.
+ */
+extern void SystemCoreClockUpdate(void);
+
+/*
  * Include the timer and delay header file.
  *
  * Functions: TIM2_Init_1ms(), delayMs(), DWT_Delay_Init(), delayUs()
@@ -143,6 +151,22 @@ int main(void)
     TIM2_Init_1ms();
 
     /*
+     * Update the SystemCoreClock global variable to match the actual
+     * hardware clock frequency.
+     *
+     * The library's TIM2_Init_1ms() may configure the system PLL and
+     * change HCLK away from the default 16 MHz HSI.  delayUs() (used
+     * by OneWire) reads SystemCoreClock to convert microseconds into
+     * DWT cycle counts — if SystemCoreClock does not match the real
+     * clock, all OneWire timing is wrong and the DS18S20 sensor cannot
+     * communicate.
+     *
+     * This call reads the RCC clock-configuration registers and writes
+     * the correct value to SystemCoreClock.
+     */
+    SystemCoreClockUpdate();
+
+    /*
      * Initialise the I2C1 peripheral.
      *
      * I2C1 is used for communication with:
@@ -184,8 +208,16 @@ int main(void)
      * registers are written, otherwise the pin configuration performed
      * by OneWire_Init() has no effect and all OneWire communication
      * silently fails.
+     *
+     * Bit 0 of AHB1ENR controls the GPIOA clock.
      */
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+    RCC->AHB1ENR |= 0x00000001U;
+
+    /*
+     * Data synchronisation barrier — ensures the clock enable write
+     * takes effect before any subsequent GPIOA register access.
+     */
+    __DSB();
 
     /*
      * Initialise the OneWire bus.
