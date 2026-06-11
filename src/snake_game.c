@@ -126,6 +126,23 @@ uint8_t SnakeGame_IsPlayable(uint8_t x, uint8_t y)
 }
 
 /*
+ * Returns 1 if a border cell is a portal opening (not a solid wall).
+ *
+ * Top portal:    (PORTAL_COL, 0)
+ * Bottom portal: (PORTAL_COL, GRID_HEIGHT-1)
+ * Left portal:   (0,          PORTAL_ROW)
+ * Right portal:  (GRID_WIDTH-1, PORTAL_ROW)
+ */
+uint8_t SnakeGame_IsPortal(uint8_t x, uint8_t y)
+{
+    if (x == PORTAL_COL && y == 0U)                          { return 1; }
+    if (x == PORTAL_COL && y == (uint8_t)(GRID_HEIGHT - 1U)) { return 1; }
+    if (x == 0U          && y == PORTAL_ROW)                 { return 1; }
+    if (x == (uint8_t)(GRID_WIDTH - 1U) && y == PORTAL_ROW) { return 1; }
+    return 0;
+}
+
+/*
  * Returns 1 if a cell is part of the border wall or an internal obstacle.
  */
 uint8_t SnakeGame_IsObstacle(const SnakeGame_t *game, uint8_t x, uint8_t y)
@@ -133,10 +150,15 @@ uint8_t SnakeGame_IsObstacle(const SnakeGame_t *game, uint8_t x, uint8_t y)
     uint8_t i;
 
     /*
-     * Border walls: cells outside the playable area.
+     * Border walls: cells outside the playable area,
+     * EXCEPT portal openings which are passable.
      */
     if (!SnakeGame_IsPlayable(x, y))
     {
+        if (SnakeGame_IsPortal(x, y))
+        {
+            return 0;
+        }
         return 1;
     }
 
@@ -196,6 +218,35 @@ void SnakeGame_Update(SnakeGame_t *game)
     case DIR_LEFT:  new_head_x--; break;
     case DIR_RIGHT: new_head_x++; break;
     default: break;
+    }
+
+    /*
+     * Portal teleportation:
+     * If the new head lands on a portal opening, wrap it to the
+     * opposite portal and step one cell into the playable area.
+     *
+     * Top    portal (PORTAL_COL, 0)            → enters from bottom (PORTAL_COL, GRID_HEIGHT-1) → land at (PORTAL_COL, PLAYABLE_MAX_Y)
+     * Bottom portal (PORTAL_COL, GRID_HEIGHT-1) → enters from top   (PORTAL_COL, 0)             → land at (PORTAL_COL, PLAYABLE_MIN_Y)
+     * Left   portal (0,          PORTAL_ROW)   → enters from right  (GRID_WIDTH-1, PORTAL_ROW)  → land at (PLAYABLE_MAX_X, PORTAL_ROW)
+     * Right  portal (GRID_WIDTH-1, PORTAL_ROW) → enters from left   (0, PORTAL_ROW)             → land at (PLAYABLE_MIN_X, PORTAL_ROW)
+     */
+    if (new_head_x == PORTAL_COL && new_head_y == 0U)
+    {
+        new_head_y = PLAYABLE_MAX_Y;
+    }
+    else if (new_head_x == PORTAL_COL &&
+             new_head_y == (uint8_t)(GRID_HEIGHT - 1U))
+    {
+        new_head_y = PLAYABLE_MIN_Y;
+    }
+    else if (new_head_x == 0U && new_head_y == PORTAL_ROW)
+    {
+        new_head_x = PLAYABLE_MAX_X;
+    }
+    else if (new_head_x == (uint8_t)(GRID_WIDTH - 1U) &&
+             new_head_y == PORTAL_ROW)
+    {
+        new_head_x = PLAYABLE_MIN_X;
     }
 
     /*

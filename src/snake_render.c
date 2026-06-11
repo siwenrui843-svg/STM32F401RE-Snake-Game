@@ -211,18 +211,24 @@ void SnakeRender_DrawBorder(void)
 {
     uint8_t x, y;
 
-    /* Top and bottom border rows */
+    /* Top and bottom border rows — skip portal openings */
     for (x = 0; x < GRID_WIDTH; x++)
     {
-        DrawWall(x, 0);                       /* top */
-        DrawWall(x, (uint8_t)(GRID_HEIGHT - 1U)); /* bottom */
+        if (x != PORTAL_COL)
+        {
+            DrawWall(x, 0);
+            DrawWall(x, (uint8_t)(GRID_HEIGHT - 1U));
+        }
     }
 
-    /* Left and right border columns (corners already covered above) */
+    /* Left and right border columns — skip portal openings */
     for (y = 1; y < (uint8_t)(GRID_HEIGHT - 1U); y++)
     {
-        DrawWall(0, y);                       /* left */
-        DrawWall((uint8_t)(GRID_WIDTH - 1U), y); /* right */
+        if (y != PORTAL_ROW)
+        {
+            DrawWall(0, y);
+            DrawWall((uint8_t)(GRID_WIDTH - 1U), y);
+        }
     }
 }
 

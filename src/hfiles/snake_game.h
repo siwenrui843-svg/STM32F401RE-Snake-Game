@@ -200,6 +200,24 @@ void SnakeGame_UpdateLevel(SnakeGame_t *game);
 uint8_t SnakeGame_IsObstacle(const SnakeGame_t *game, uint8_t x, uint8_t y);
 
 /*
+ * Portal (tunnel) openings in the border wall.
+ *
+ * Four openings, one on each side, placed at the midpoint of each edge.
+ * A snake entering a portal exits from the opposite portal.
+ *
+ * Top / bottom openings: column PORTAL_COL, rows 0 and GRID_HEIGHT-1.
+ * Left / right openings: column 0 and GRID_WIDTH-1, row PORTAL_ROW.
+ */
+#define PORTAL_COL  16U   /* horizontal midpoint of the top/bottom edges */
+#define PORTAL_ROW   8U   /* vertical midpoint of the left/right edges   */
+
+/*
+ * Returns 1 if the given border cell is a portal opening
+ * (and therefore NOT a solid wall).
+ */
+uint8_t SnakeGame_IsPortal(uint8_t x, uint8_t y);
+
+/*
  * Returns 1 if the given cell is inside the playable area
  * (not a border wall cell).
  */
